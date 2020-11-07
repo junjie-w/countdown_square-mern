@@ -8,7 +8,7 @@ export const CountdownPublic = () => {
   const dataReceived = useLocation();
 
   console.log("2222", dataReceived)
-  const { key } = dataReceived.state.key;
+  //const { key } = dataReceived.state.key;
   const { title } = dataReceived.state.title;
   const { untilDate } = dataReceived.state.untilDate;
 

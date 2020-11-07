@@ -8,6 +8,7 @@ import { HomeLeft } from './components/Home/HomeLeft';
 import { Countdown } from './components/countdownLink/Countdown';
 import { CountdownPublic } from './components/countdownPublic/CountdownPublic';
 import { Login } from './components/login/Login';
+import { PublicCard } from './components/countdownPublic/PublicCard';
 
 function App() {
   return (
@@ -29,7 +30,11 @@ function App() {
               <CountdownPublic />
             </div>
           </Route>
-
+          <Route exact path="/countdownSquare">
+            <div>
+              <PublicCard />
+            </div>
+          </Route>
           <Route path="/user/:userId">
             <Login />
             {/*<UserRecord />*/}

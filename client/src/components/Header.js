@@ -9,7 +9,7 @@ export const Header = () => {
         <Link to="/">
           <p className="header__title header__titleHome">Home</p>
         </Link>
-        <Link to="/public">
+        <Link to="/countdownSquare">
           <p className="header__title header__titleCountdown">
             Countdown Square
             {/*Timer Square*/}
