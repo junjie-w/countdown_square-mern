@@ -1,0 +1,52 @@
+.home_right {
+  flex: 0.6;
+  margin-top: 1.75rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100% !important;
+  height: 100% !important;
+  align-items: center;
+}
+
+.input {
+  /*align-self: flex-end;*/
+  padding: 1.5rem;
+  border-radius: 30px !important;
+  border-color: rgb(219, 190, 190) !important;
+  margin-bottom: 1.7rem;
+  color: aliceblue !important;
+  background-color: wheat !important;
+}
+
+.dateTimePicker {
+  align-self: center;
+}
+
+.datePicker {
+  margin-right: 2rem;
+}
+
+.timePicker {
+  margin-left: 2rem;
+}
+
+.button {
+  /*align-self: flex-start;*/
+  padding: 13px !important;
+  border-radius: 30px !important;
+  background-color: rgb(137, 187, 159) !important;
+  border: none;
+  text-transform: inherit !important;
+  color: whitesmoke !important;
+  font-size: 1.06rem !important;
+}
+
+@media (min-width: 2000px) {
+  .home_right {
+    flex: 0.4;
+  }
+}

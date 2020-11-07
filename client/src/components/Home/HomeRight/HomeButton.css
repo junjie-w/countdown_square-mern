@@ -1,0 +1,10 @@
+.button {
+  /*align-self: flex-start;*/
+  padding: 13px !important;
+  border-radius: 30px !important;
+  background-color: rgb(137, 187, 159) !important;
+  border: none;
+  text-transform: inherit !important;
+  color: whitesmoke !important;
+  font-size: 1.06rem !important;
+}

@@ -3,7 +3,11 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
-import { UserInput } from './components/UserInput';
+import { HomeRight } from './components/Home/HomeRight/HomeRight';
+import { HomeLeft } from './components/Home/HomeLeft';
+import { Countdown } from './components/countdownLink/Countdown';
+import { CountdownPublic } from './components/countdownPublic/CountdownPublic';
+import { Login } from './components/login/Login';
 
 function App() {
   return (
@@ -11,12 +15,23 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/">
-            <UserInput />
-            {/*<CountdownTimer />*/}
+          <Route exact path="/">
+            <div className="home">
+              <HomeLeft />
+              <HomeRight />
+            </div>
+          </Route>
+          <Route exact path="/countdown/:countdownId">
+            <Countdown />
+          </Route>
+          <Route exact path="/public">
+            <div>
+              <CountdownPublic />
+            </div>
           </Route>
 
-          <Route path="/countdown/:user">
+          <Route path="/user/:userId">
+            <Login />
             {/*<UserRecord />*/}
           </Route>
         </Switch>

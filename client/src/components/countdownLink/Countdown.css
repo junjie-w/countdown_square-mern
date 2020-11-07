@@ -1,0 +1,88 @@
+.countdown {
+  display: flex;
+  align-items: center;
+}
+
+.textAndButton {
+  display: flex;
+  flex-direction: row;
+}
+
+.timer {
+  flex: 0.55;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*color: rgb(250, 239, 239);*/
+}
+
+/*.backgroundImg {
+  object-fit: contain;
+  opacity: 0.8;
+  border-radius: 20px;
+  position: absolute;
+}*/
+
+.text {
+  /*z-index: 100;*/
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /*margin-left: 7rem;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(247, 229, 197);
+
+  /*background-color: rgba(132, 185, 155, 0.85);*/
+  background-color: rgba(147, 182, 162, 0.85);
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 1.5rem;
+  box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.75);
+}
+
+.text > p {
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.timerImg {
+  flex: 0.45;
+  margin-right: 3rem;
+  margin-bottom: 5rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+/*.buttonVertical {
+  display: grid;
+}*/
+
+.countdownButton {
+  /*background-color: rgba(137, 187, 159, 1.15) !important;*/
+  background-color: rgb(190, 171, 171) !important;
+  /*color: rgb(247, 229, 197) !important;*/
+  color: rgb(245, 234, 234) !important;
+  /*color: rgb(247, 231, 231) !important;*/
+  margin: 1rem !important;
+  border-radius: 30px !important;
+  text-transform: inherit !important;
+  font-size: 1rem !important;
+}
+
+.linkButton {
+  /*justify-self: start;
+  align-self: start;*/
+  height: fit-content;
+  align-self: center;
+}
+
+@media (max-width: 900px) {
+  .countdown {
+    flex-direction: column;
+  }
+}

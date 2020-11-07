@@ -1,0 +1,12 @@
+.card {
+  height: auto;
+  min-height: 100% !important;
+  color: rgb(247, 229, 197);
+  /*background-color: rgba(132, 185, 155, 0.85);*/
+  background-color: rgba(147, 182, 162, 0.85);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 1rem;
+  font-size: 1rem;
+  box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.75);
+}

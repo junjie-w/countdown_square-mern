@@ -9,3 +9,23 @@
   margin-top: 4.65vh;
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
 }
+
+.home {
+  display: flex;
+  align-content: center;
+}
+
+@media (max-width: 800px) {
+  .home {
+    flex-direction: column;
+  }
+  .app {
+    height: 90%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .home {
+    justify-content: space-evenly;
+  }
+}
