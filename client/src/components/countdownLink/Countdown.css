@@ -29,6 +29,7 @@
   /*z-index: 100;*/
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-right: 0.7rem;
   /*margin-left: 7rem;*/
   display: flex;
   flex-direction: column;
@@ -74,11 +75,22 @@
   font-size: 1rem !important;
 }
 
+.savedButton {
+  background-color: rgba(61, 141, 168, 0.75) !important;
+}
+
 .linkButton {
   /*justify-self: start;
   align-self: start;*/
   height: fit-content;
   align-self: center;
+}
+
+.publicText {
+  color: rgba(63, 133, 93, 0.85);
+  margin-right: auto;
+  margin-left: 2rem;
+  justify-self: start !important;
 }
 
 @media (max-width: 900px) {

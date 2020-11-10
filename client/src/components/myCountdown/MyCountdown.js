@@ -1,17 +1,21 @@
 import React, { useEffect } from 'react';
-import './PublicCard.css';
+import './MyCountdown.css';
 import axios from '../../axios';
 import { useState } from 'react';
 import { useStateValue } from '../../context/StateProvider';
 import { TimerCard } from '../countdownLink/TimerCard';
-import { EachPublicCard } from './EachPublicCard';
+import { EachPublicCard } from '../countdownPublic/EachPublicCard';
+import { useLocation } from "react-router-dom";
 
-
-export const PublicCard = () => {
+export const MyCountdown = () => {
   //console.log("yuyuyuyuyu", title, untilDate)
   const [timerCards, setTimerCards] = useState([])
   const [info, dispatch] = useStateValue();
-  const { selectedDate, title } = info;
+  const { selectedDate, title, user, userToken } = info;
+  console.log("infooooo", info)
+
+  const data = useLocation();
+  console.log("jijij", data)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,10 +43,10 @@ export const PublicCard = () => {
 
 
 
-  const publicTimerCards = timerCards.filter(card => card.publicCountdown === true)
-  console.log("lalala", publicTimerCards)
+  const personalTimerCards = timerCards.filter(card => card.userToken === userToken && card.personalCountdown === true)
+  console.log("guagua", personalTimerCards)
 
-  let eachTimer = publicTimerCards.map(card => {
+  let eachTimer = personalTimerCards.map(card => {
     //console.log("card?", new Date(card.selectedDate));
     //console.log("new", new Date())
     const selectedDate = new Date(card.selectedDate);
@@ -123,7 +127,7 @@ export const PublicCard = () => {
 
   return (
     <div className="cardContainer">
-      {publicTimerCards.map(card =>
+      {personalTimerCards.map(card =>
         <EachPublicCard
           //className="eachPublicCard"
           id={card._id}

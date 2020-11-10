@@ -18,7 +18,7 @@ export const Countdown = () => {
   //console.log("333", selectedDate);
 
   //const { key } = data;
-  const { id } = data.state.key;
+  const { id } = data.state;
   const { selectedDate } = data.state.selectedDate;
   const { title } = data.state.title;
   //console.log("selectedDate", selectedDate)
@@ -41,7 +41,6 @@ export const Countdown = () => {
     minute,
     second
   }
-
 
   const calculateTimeLeft = () => {
     let difference = +selectedDate - +new Date()
@@ -100,7 +99,11 @@ export const Countdown = () => {
   //    {timeLeft[interval]} {interval} {" "}
   //  </span>
   //])
-  const saveToDb = () => {
+
+  const [savedToPublic, setSavedToPublic] = useState(false)
+  const [savedToPersonal, setSavedToPersonal] = useState(false)
+
+  const saveToDbPublic = () => {
     const timerInfo = {
       title: title,
       toDateYear: year,
@@ -109,18 +112,67 @@ export const Countdown = () => {
       toDateHour: hour,
       toDateMinute: minute,
       toDateSecond: second,
-      days: days,
-      hours: hours,
-      minutes: minutes,
-      seconds: seconds,
-      selectedDate: selectedDate
+      //days: days,
+      //hours: hours,
+      //minutes: minutes,
+      //seconds: seconds,
+      selectedDate: selectedDate,
+      publicCountdown: true,
+      timerId: id,
     }
 
     const postData = async () => await axios.post('/countdown/public', timerInfo)
       .then(response => console.log(response))
       .catch(error => console.log("error", error));
     postData();
+
+    console.log("saved to public countdown!")
+
+    setSavedToPublic(true)
   }
+
+  const saveToDbPersonal = () => {
+    const timerInfo = {
+      title: title,
+      toDateYear: year,
+      toDateMonth: month,
+      toDateDay: day,
+      toDateHour: hour,
+      toDateMinute: minute,
+      toDateSecond: second,
+      //days: days,
+      //hours: hours,
+      //minutes: minutes,
+      //seconds: seconds,
+      selectedDate: selectedDate,
+      personalCountdown: true,
+      timerId: id,
+    }
+
+    const postData = async () => await axios.post('/countdown/public', timerInfo)
+      .then(response => console.log(response))
+      .catch(error => console.log("error", error));
+    postData();
+
+    console.log("saved to my countdown!")
+
+    setSavedToPersonal(true)
+  }
+
+  //let ConditionalLink = !savedToPublic ? Link : <Link to={{
+  //  pathname: '/countdownSquare',
+  //  state: {
+  //    title: { title },
+  //    untilDate: { untilDate },
+  //    key: { id },
+  //    //publicTimerCards: publicTimerCards
+  //  }
+  //}}></Link>;
+
+  const ConditionalLink = ({ children, to, condition }) => (!!condition && to)
+    ? <Link to={to}>{children}</Link>
+    : <>{children}</>;
+
 
   return (
     <div className="countdown">
@@ -146,26 +198,45 @@ export const Countdown = () => {
         </div>*/}
 
         <div className="buttons">
-          <Link to={{
-            pathname: '/public',
+          {/*<Link to={{
+            pathname: '/countdownSquare',
             state: {
               title: { title },
               untilDate: { untilDate },
               key: { id },
               //publicTimerCards: publicTimerCards
             }
-          }}>
+          }}>*/}
+          <ConditionalLink to="/countdownSquare" condition={savedToPublic}>
             {/*<Button onClick={() => addToPublic(title, untilDate, id)} type="submit" variant="contained" className="countdownButton"  >*/}
-            <Button onClick={saveToDb} type="submit" variant="contained" className="countdownButton"  >
+            {/*<Link path="/countdownSquare">*/}
+            <Button onClick={!savedToPublic && saveToDbPublic} type="submit" variant="contained" className={`countdownButton ${savedToPublic && "savedButton"}`}>
               {/*Add to public square*/}
-              Add to Timer Square
-         </Button>
+              {!savedToPublic ? "Save to Countdown Square*" : "Check it in Countdown Square"}
+            </Button>
+          </ConditionalLink>
+          {/*</Link>*/}
+          {/*</Link>*/}
+          <Link to={{
+            pathname: `/user/${id}`,
+            state: {
+              timerId: { id },
+              title: { title },
+              selectedDate: { selectedDate }
+            }
+          }}          >
+            {/*<ConditionalLink to={`/user/${id}`} condition={savedToPersonal}>*/}
+            {/*<Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >*/}
+            <Button onClick={saveToDbPersonal} type="submit" variant="contained" className="countdownButton"  >
+              {/*{!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}*/}
+           Save to My Countdown
+          </Button>
+            {/*</ConditionalLink>*/}
           </Link>
-          <Link to="/user/:userId">
-            <Button type="submit" variant="contained" className="countdownButton"  >
-              Save to My Countdown
-         </Button>
-          </Link>
+        </div>
+        <div className="publicText">
+          <p><em>*for public events, holidays, etc:)</em></p>
+          {/*<p><em>*Countdown Square collects countdowns for public events, holidays, etc:)</em></p>*/}
         </div>
       </div>
       {/*<div className="button">*/}

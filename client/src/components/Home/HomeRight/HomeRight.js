@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const HomeRight = () => {
+  const formRef = React.useRef();
 
   const [{ }, dispatch] = useStateValue();
 
@@ -145,7 +146,7 @@ export const HomeRight = () => {
 
   return (
     <div className="home_right">
-      <form className={`form ${classes.root}`} noValidate autoComplete="off">
+      <form className={`form ${classes.root}`} noValidate autoComplete="off" ref={formRef}>
         <TextField
           onChange={e => setInput(e.target.value)}
           value={input}
@@ -153,6 +154,7 @@ export const HomeRight = () => {
           id="filled-basic"
           label="Create a countdown for..."
           variant="filled"
+          required
         />
         <div className="dateTimePicker">
           <MuiThemeProvider theme={customTheme}>

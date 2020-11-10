@@ -8,11 +8,26 @@
   border-radius: 30px;
   margin-top: 4.65vh;
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .home {
   display: flex;
   align-content: center;
+}
+
+.countdownSquare {
+  display: grid;
+  place-self: stretch;
+  place-items: stretch;
+  overflow: hidden;
+}
+
+.loginPage {
+  display: grid;
+  place-items: stretch;
+  place-items: center;
 }
 
 @media (max-width: 800px) {

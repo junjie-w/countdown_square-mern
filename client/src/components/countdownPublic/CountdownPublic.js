@@ -48,9 +48,9 @@ export const CountdownPublic = () => {
 
 
   return (
-    <div className="timerContainer">
+    <div>
       {publicTimerCards.map(card => (
-        <div>
+        <div className="publicCard">
           <PublicCard title={title} untilDate={untilDate} />
         </div>
       ))}
