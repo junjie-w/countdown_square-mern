@@ -31,7 +31,7 @@ app.post('/countdown/public', (req, res) => {
 });
 
 app.get('/countdown/public', (req, res) => {
-  console.log("hello");
+  //console.log("hello");
 
   Card.find((err, data) => {
     if (err) {
@@ -40,6 +40,41 @@ app.get('/countdown/public', (req, res) => {
       res.status(200).send(data)
     }
   })
+})
+
+app.delete('/countdown/:timerId', (req, res) => {
+  console.log("reqqq", req.body)
+  const timerId = req.params.timerId;
+  Card.findOneAndDelete({ timerId: timerId }, (err) => {
+    if (err) {
+      res.send(err)
+    } else {
+      res.send("deleted");
+    }
+  });
+})
+
+app.patch('/user/:timerId', (req, res) => {
+  console.log("timerId>>>", req.params.timerId)
+  //console.log("reqbody>>>", req.body)
+  const timerId = req.params.timerId;
+  //console.log(timerId)
+  const token = req.body.token;
+  console.log("token>>>", token)
+  Card.findOneAndUpdate({ timerId: timerId }, { userToken: token }, { new: true },
+    (err, data) => {
+      console.log("doc", data);
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        res.status(200).send(data)
+      }
+    }
+  );
+
+  //res.send(req.body)
+
+  //Card.findByIdAndUpdate(id, {userToken: req})
 })
 
 app.listen(port, () => console.log(`listening on localhost: ${port}`))

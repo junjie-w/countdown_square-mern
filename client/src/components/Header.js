@@ -17,7 +17,7 @@ export const Header = () => {
           </p>
         </Link>
       </div>
-      <Link to="/user/:userId">
+      <Link to="/user/:timerId">
         <p className="header__title header__titleUser">My Countdown</p>
       </Link>
 

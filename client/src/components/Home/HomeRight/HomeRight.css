@@ -1,15 +1,42 @@
 .home_right {
   flex: 0.6;
   margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: stretch;*/
 }
 
 .form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 97% !important;
+  height: 100% !important;
+  align-items: center;
+}
+
+.form .MuiFormControl-root {
+  margin-right: 0.5vw !important;
+}
+
+/*form .form makeStyles-root-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 100% !important;
   height: 100% !important;
   align-items: center;
+}*/
+
+.form > .form makeStyles-root-1 {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.form > .MuiFormControl-root {
+  width: 31.5vw;
+  margin-left: 0 !important;
+  margin-right: 5rem;
 }
 
 .input {
@@ -22,27 +49,130 @@
   background-color: wheat !important;
 }
 
+.input > .MuiFilledInput-root {
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.4rem !important;
+}
+
+.input .MuiFormLabel-root {
+  font-size: 1rem;
+}
+
+.input > .MuiFilledInput-underline:before {
+  border-bottom: 2px solid #92bba7 !important;
+}
+
+.input > .MuiFilledInput-root:after {
+  border-bottom: 2px solid rgb(105, 141, 120) !important;
+}
+
+.input > .MuiInputBase-root {
+  /*background-color: #97b6be !important;*/
+  /*background-color: #94aab3 !important;*/
+  background-color: rgb(245, 230, 203) !important;
+  border-radius: 10px;
+  align-self: stretch;
+}
+
+.input > .MuiInputLabel-root {
+  color: rgba(106, 143, 121, 0.75) !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
 .dateTimePicker {
+  /*margin: 0 !important;*/
   align-self: center;
+  width: 6.5rem !important;
+  display: flex !important;
+  flex-direction: column;
 }
 
 .datePicker {
-  margin-right: 2rem;
+  align-self: flex-start;
+  margin-right: 3rem !important;
+  padding: 0.25rem 2rem 0.45rem 0.55rem !important;
+}
+
+.datePicker .MuiFormControl-root {
+  width: 18.5vw;
+  color: #89bba3;
+}
+
+.datePicker .MuiFormLabel-root {
+  color: rgba(105, 141, 120) !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.datePicker .MuiInputBase-input {
+  color: #89bba3 !important;
+  /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.datePicker .MuiInput-underline::before {
+  border-bottom: 2px solid rgb(105, 141, 120) !important;
+}
+
+.datePicker .MuiFilledInput-root::after {
+  border-bottom: 2px solid #92bba7 !important;
+}
+
+.datePicker .MuiSvgIcon-root {
+  color: #d4a5a5;
 }
 
 .timePicker {
-  margin-left: 2rem;
+  align-self: flex-end;
+  padding-right: 0.65rem;
+  padding-bottom: 0.6rem;
+  margin-top: 0.45rem !important;
+}
+
+.timePicker .MuiInput-underline::before {
+  border-bottom: 2px solid rgb(105, 141, 120) !important;
+}
+
+.timePicker .MuiInput-underline::after {
+  border-bottom: 2px solid #92bba7 !important;
+}
+
+.timePicker .MuiFormControl-root {
+  width: 18.5vw;
+}
+
+.timePicker .MuiFormLabel-root {
+  color: rgba(105, 141, 120) !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.timePicker .MuiInputBase-input {
+  color: #79b899 !important;
+  /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.timePicker .MuiSvgIcon-root {
+  color: #709fb0;
+}
+
+.form a {
+  width: 7vw;
 }
 
 .button {
   /*align-self: flex-start;*/
-  padding: 13px !important;
-  border-radius: 30px !important;
+  padding: 12px 28.5px !important;
+  border-radius: 27px !important;
   background-color: rgb(137, 187, 159) !important;
   border: none;
-  text-transform: inherit !important;
+  /*text-transform: inherit !important;*/
   color: whitesmoke !important;
-  font-size: 1.06rem !important;
+  font-size: 1rem !important;
 }
 
 @media (min-width: 2000px) {

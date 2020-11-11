@@ -1,0 +1,63 @@
+.text {
+  font-size: 1.3rem;
+  border-left: 1px solid rgb(252, 245, 245);
+  border-right: 1px solid rgb(252, 245, 245);
+  border-top: 1px solid rgb(252, 245, 245);
+  border-bottom: 0.25px solid rgba(252, 245, 245, 0.65);
+}
+
+.cardTitle {
+  border-bottom: 1px solid rgb(252, 245, 245);
+  padding: 0.5rem 1rem 0.3rem 1rem !important;
+  /*width: 75%;*/
+  text-align: center;
+  font-family: fantasy !important;
+  font-weight: 800;
+}
+
+.cardTitle span {
+  font-family: cursive;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.upText {
+  padding-top: 1.15rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.timerText {
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+}
+
+.pText {
+  padding: 0.5rem 0.25rem !important;
+  font-family: cursive;
+}
+
+.dateText {
+  padding: 0.25rem 0.5rem !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dateText1 {
+  margin-right: 0.3rem;
+  margin-left: 1.2rem;
+}
+
+.dateText2 {
+  margin-left: 0.3rem;
+  margin-right: 1.2rem;
+}
+
+.textSeconds {
+  color: rgba(240, 216, 172, 1.15);
+  /*color: wheat;*/
+}
+
+.copyText {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

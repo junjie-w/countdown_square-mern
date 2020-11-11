@@ -1,20 +1,23 @@
 .countdown {
   display: flex;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .textAndButton {
   display: flex;
   flex-direction: row;
+  margin-left: 1.35rem;
 }
 
 .timer {
   flex: 0.55;
-  margin: 3rem;
+  margin: 3rem 2rem 3rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  padding-left: 1.75rem;
   /*color: rgb(250, 239, 239);*/
 }
 
@@ -52,7 +55,7 @@
 .timerImg {
   flex: 0.45;
   margin-right: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .buttons {
@@ -88,9 +91,36 @@
 
 .publicText {
   color: rgba(63, 133, 93, 0.85);
-  margin-right: auto;
-  margin-left: 2rem;
+  margin-left: 1.7rem;
   justify-self: start !important;
+}
+
+.purpleButtonText {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.countdown::-webkit-scrollbar {
+  width: 0.65rem;
+  border-radius: 35px;
+}
+
+.countdown::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(147, 182, 162, 2.85);
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);*/
+  /*background-clip: content-box;*/
+  border-radius: 50px;
+}
+
+.countdown::-webkit-scrollbar-thumb {
+  background: rgba(65, 138, 167, 0.5);
+  /*border: 5px solid transparent;*/
+  /*outline: 1px solid slategrey;*/
+  border-radius: 50px;
+}
+
+.countdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(207, 154, 154, 0.5);
 }
 
 @media (max-width: 900px) {

@@ -9,7 +9,13 @@ const cardSchema = new Schema({
   toDateHour: Number,
   toDateMinute: Number,
   toDateSecond: Number,
-  selectedDate: Date
+  selectedDate: Date,
+  publicCountdown: Boolean,
+  personalCountdown: Boolean,
+  timerId: String,
+  //userName: String,
+  //userEmail: String,
+  userToken: String
   //days: Number,
   //hours: Number,
   //minutes: Number,

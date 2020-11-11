@@ -69,18 +69,18 @@ export const Countdown = () => {
     return () => clearTimeout(timer)
   });
 
-  const timerComponents = []
+  //const timerComponents = []
 
-  Object.keys(timeLeft).forEach(interval => {
-    if (!timeLeft[interval]) {
-      return 0;
-    }
-    timerComponents.push(
-      <span>
-        {timeLeft[interval]} {interval} {" "}
-      </span>
-    )
-  })
+  //Object.keys(timeLeft).forEach(interval => {
+  //  if (!timeLeft[interval]) {
+  //    return 0;
+  //  }
+  //  timerComponents.push(
+  //    <span>
+  //      {timeLeft[interval]} {interval} {" "}
+  //    </span>
+  //  )
+  //})
   //const timerComponents = [];
 
   //Object.keys(timeLeft).forEach((interval) => {
@@ -179,7 +179,8 @@ export const Countdown = () => {
 
       <div className="timer">
         <div className="textAndButton">
-          <TimerCard title={title} timerComponents={timerComponents} year={year} month={month} day={day} hour={hour} minute={minute} second={second} />
+          {/*<TimerCard title={title} timerComponents={timerComponents} year={year} month={month} day={day} hour={hour} minute={minute} second={second} />*/}
+          <TimerCard title={title} year={year} month={month} day={day} hour={hour} minute={minute} second={second} days={days} hours={hours} minutes={minutes} seconds={seconds} />
           {/*<div className="text">
             <p>{title} Countdown </p>
             {console.log(timerComponents)}
@@ -212,7 +213,9 @@ export const Countdown = () => {
             {/*<Link path="/countdownSquare">*/}
             <Button onClick={!savedToPublic && saveToDbPublic} type="submit" variant="contained" className={`countdownButton ${savedToPublic && "savedButton"}`}>
               {/*Add to public square*/}
-              {!savedToPublic ? "Save to Countdown Square*" : "Check it in Countdown Square"}
+              <div className="purpleButtonText">
+                {!savedToPublic ? "Save to Countdown Square*" : "Check it in Countdown Square"}
+              </div>
             </Button>
           </ConditionalLink>
           {/*</Link>*/}
@@ -229,8 +232,10 @@ export const Countdown = () => {
             {/*<Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >*/}
             <Button onClick={saveToDbPersonal} type="submit" variant="contained" className="countdownButton"  >
               {/*{!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}*/}
-           Save to My Countdown
-          </Button>
+              <div className="purpleButtonText">
+                Save to My Countdown
+              </div>
+            </Button>
             {/*</ConditionalLink>*/}
           </Link>
         </div>

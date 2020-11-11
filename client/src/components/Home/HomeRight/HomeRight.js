@@ -18,6 +18,7 @@ import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { useStateValue } from '../../../context/StateProvider';
 import { actionTypes } from '../../../context/Reducer';
+import AlarmIcon from '@material-ui/icons/Alarm';
 
 export const customTheme = createMuiTheme({
   palette: {
@@ -152,9 +153,9 @@ export const HomeRight = () => {
           value={input}
           className="input"
           id="filled-basic"
-          label="Create a countdown for..."
+          label="I want to create a countdown for..."
           variant="filled"
-          required
+        //required
         />
         <div className="dateTimePicker">
           <MuiThemeProvider theme={customTheme}>
@@ -165,7 +166,7 @@ export const HomeRight = () => {
                     <KeyboardDatePicker
                       margin="normal"
                       id="date-picker-dialog"
-                      label="Date Picker"
+                      label="Pick a date"
                       format="MM/dd/yyyy"
                       value={selectedDate}
                       onChange={handleDateChange}
@@ -178,12 +179,13 @@ export const HomeRight = () => {
                     <KeyboardTimePicker
                       margin="normal"
                       id="time-picker"
-                      label="Time Picker"
+                      label="Pick a time"
                       value={selectedDate}
                       onChange={handleDateChange}
                       KeyboardButtonProps={{
                         'aria-label': 'change time',
                       }}
+                      keyboardIcon={<AlarmIcon />}
                     />
                   </div>
                 </div>
