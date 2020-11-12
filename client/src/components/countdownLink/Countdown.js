@@ -70,6 +70,8 @@ export const Countdown = () => {
     second
   }
 
+  console.log("butterfly", untilDate)
+
   const calculateTimeLeft = () => {
     let difference = +selectedDate - +new Date()
     let timeLeft = {};
@@ -233,9 +235,9 @@ export const Countdown = () => {
     <div className="countdown">
 
       <div className="timer">
-        <div className="textAndButton">
+        <div className="timerContainer">
           {/*<TimerCard title={title} timerComponents={timerComponents} year={year} month={month} day={day} hour={hour} minute={minute} second={second} />*/}
-          <TimerCard title={title} year={year} month={month} day={day} hour={hour} minute={minute} second={second} days={days} hours={hours} minutes={minutes} seconds={seconds} />
+          <TimerCard title={title} year={year} month={month} day={day} hour={hour} minute={minute} second={second} days={days} hours={hours} minutes={minutes} seconds={seconds} selectedDate={selectedDate} />
           {/*<div className="text">
             <p>{title} Countdown </p>
             {console.log(timerComponents)}

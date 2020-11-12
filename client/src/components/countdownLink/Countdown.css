@@ -5,10 +5,11 @@
   /*overflow-x: scroll;*/
 }
 
-.textAndButton {
+.timerContainer {
+  /*height: 100%;
+  width: 100%;*/
   display: flex;
-  flex-direction: row;
-  margin-left: 1.35rem;
+  place-items: center;
 }
 
 .timer {
@@ -16,9 +17,11 @@
   margin: 1.1rem 1.5rem 1rem 2.8rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   align-items: flex-start;
+  justify-content: center;
   padding-left: 1.75rem;
+  height: 100%;
   /*color: rgb(250, 239, 239);*/
 }
 

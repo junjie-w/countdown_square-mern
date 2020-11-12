@@ -22,6 +22,7 @@
   place-self: stretch;
   place-items: stretch;
   overflow: hidden;
+  height: 70vh !important;
 }
 
 .loginPage {

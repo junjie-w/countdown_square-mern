@@ -114,7 +114,8 @@
 
 .datePicker .MuiInput-underline::before {
   /*border-bottom: 2px solid rgb(207, 185, 143) !important;*/
-  border-bottom: 2.25px solid rgba(245, 230, 203, 1.25) !important;
+  /*border-bottom: 2.25px solid rgba(245, 230, 203, 1.25) !important;*/
+  border-bottom: 3px solid rgba(245, 230, 203, 3) !important;
 }
 
 .datePicker .MuiFilledInput-root::after {
@@ -134,7 +135,7 @@
 
 .timePicker .MuiInput-underline::before {
   /*border-bottom: 2px solid rgb(207, 185, 143) !important;*/
-  border-bottom: 2px solid rgba(245, 230, 203, 1.25) !important;
+  border-bottom: 3px solid rgba(245, 230, 203, 3) !important;
 }
 
 .timePicker .MuiInput-underline::after {

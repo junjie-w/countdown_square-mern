@@ -1,9 +1,39 @@
+.textAndButton {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1.35rem;
+  /*height: 100%;
+  width: 100%;*/
+}
+
 .text {
   font-size: 1.3rem;
   border-left: 1px solid rgb(252, 245, 245);
   border-right: 1px solid rgb(252, 245, 245);
   border-top: 1px solid rgb(252, 245, 245);
   border-bottom: 0.25px solid rgba(252, 245, 245, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*width: 27.5vw;*/
+  /*width: 90%;*/
+  /*height: 38vh;*/
+  /*height: 80%;*/
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-bottom: 0.5rem;
+}
+
+.dot {
+  height: 0.53rem;
+  width: 0.53rem;
+  border-radius: 100%;
+  background: rgba(255, 235, 235, 0.8);
+  box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.75);
 }
 
 .cardTitle {
@@ -27,8 +57,12 @@
 }
 
 .timerText {
-  padding-left: 3.75rem;
-  padding-right: 3.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
 .pText {
@@ -38,6 +72,7 @@
 
 .dateText {
   padding: 0.25rem 0.5rem !important;
+  font-size: 1.132rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -69,19 +104,6 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.dots {
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-}
-
-.dot {
-  height: 0.53rem;
-  width: 0.53rem;
-  border-radius: 100%;
-  background: rgba(255, 235, 235, 0.8);
-  box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.75);
-}
 /*
 .leftTop {
   top: 0;

@@ -1,84 +1,157 @@
-.card {
+/*.eachCard__addDeleteButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}*/
+
+.eachCard {
   /*background-size: auto 100%;*/
 
-  height: 9rem;
+  /*height: 9rem;*/
   /*min-height: 100% !important;*/
-  width: 8rem;
+  /*width: 8rem;*/
   color: rgba(132, 185, 155, 0.85);
   /*background-color: rgba(132, 185, 155, 0.85);*/
   /*background-color: rgb(248, 236, 216);*/
-  background-color: rgb(248, 238, 222);
-
+  /*background-color: rgb(248, 238, 222);*/
+  background-color: rgb(255, 242, 220);
+  border: 1px solid rgba(255, 242, 220, 0.85);
   border-radius: 15px;
   padding: 15px;
   margin: 1rem;
   font-size: 1rem;
   box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  align-items: center;
+  /*overflow: hidden;*/
+  /*width: fit-content;*/
 }
 
-.title {
+.eachCard__dots {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  /*margin-bottom: 0.15rem;*/
+  margin-bottom: 0.1rem;
+}
+
+.eachCardDot {
+  height: 0.43rem;
+  width: 0.43rem;
+  border-radius: 100%;
+  /*background: rgba(50, 138, 111, 0.7);*/
+  background-color: rgba(99, 170, 148, 0.7) !important;
+  /*background-color: rgba(163, 170, 99, 0.7) !important;*/
+  /*background-color: rgba(169, 170, 99, 0.7) !important;*/
+  box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.75);
+}
+
+.eachCard__title {
   text-align: center;
+  border-bottom: 1px solid rgba(99, 170, 148, 0.7);
+  /*font-family: fantasy !important;*/
+  /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+  font-family: fantasy;
+  padding: 0.1rem 1rem 0.2rem 1rem !important;
+  font-size: 1.1rem;
+}
+
+.eachCard__title span {
+  font-family: cursive;
+  font-weight: 500;
+  /*margin-left: 0.5rem;*/
+  /*font-size: 0.95rem;*/
+}
+
+.eachCard__upText {
+  padding-top: 0.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+  /*color: rgba(166, 173, 107, 0.85) !important;*/
+  /*color: rgba(107, 173, 153, 0.85) !important;*/
+  color: rgba(107, 173, 153, 0.85) !important;
+}
+
+.eachCard__timerText {
+  margin-top: 0.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.1rem;
+}
+
+/*.titleCountdown {
+  text-align: center;
+}*/
+
+.eachTextSeconds {
+  color: rgba(107, 173, 153, 1.15) !important;
+}
+
+.textUntil {
+  justify-self: center !important;
+  flex: 1;
+  text-align: center;
+}
+
+.eachCard__until {
+  color: rgba(132, 185, 155, 0.75);
+  padding: 0.3rem 0.2rem !important;
+  /*font-family: cursive;*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif, 'Lucida Sans', Arial,
+    sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.eachCard__deleteButton {
+  justify-self: end;
+  display: none;
+}
+
+.deleteButton.MuiIconButton-root {
+  color: wheat;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.eachCard:hover .eachCard__deleteButton {
+  display: block;
+}
+
+.eachCard__untilDate {
+  padding: 0.03rem 0.2rem 0.1rem !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: rgba(132, 185, 155, 1.2);
+  /*flex-direction: column;
+  align-items: center;*/
+}
+
+.textUntilDate1 {
+  margin-right: 0.15rem;
+  /*margin-left: 1.2rem;*/
+}
+
+.textUntilDate2 {
+  margin-left: 0.15rem;
+  /*margin-right: 1.2rem;*/
+}
+
+/*.iconButton {
+  color: rgb(226, 212, 187) !important;
 }
 
 .textAndIcon {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.titleText {
-  color: #70adb5;
-  font-family: serif;
-  font-size: 1.25rem;
-  border-bottom: 1px solid lightblue;
-}
-
-.titleCountdown {
-  text-align: center;
-}
-
-.timerText {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.timerText {
-  /*color: #556052;*/
-  /*border-right: 1px solid lightblue;*/
-}
-
-.textDays {
-  /*color: #8a8080;*/
-  font-weight: bold;
-}
-
-.textHours {
-  /*color: #8a8080;*/
-  font-weight: bold;
-}
-
-.textMinutes {
-  /*color: #8a8080;*/
-  font-weight: bold;
-}
-
-.textSeconds {
-  /*color: #514d6b;*/
-  font-weight: bold;
-}
-
-.textUntil {
-  color: rgba(231, 177, 177, 0.6);
-  /*color: #709fb0;*/
-  text-align: center;
-}
-
-.textUntilDate {
-  font-weight: bold;
-  text-align: center;
-  color: #70adb5;
-}
-
-.iconButton {
-  color: rgb(226, 212, 187) !important;
-}
+}*/

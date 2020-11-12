@@ -11,7 +11,7 @@ export const PublicCard = () => {
   //console.log("yuyuyuyuyu", title, untilDate)
   const [timerCards, setTimerCards] = useState([])
   const [info, dispatch] = useStateValue();
-  const { selectedDate, title } = info;
+  const { timerId, title } = info.countdownInfo;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,7 +24,7 @@ export const PublicCard = () => {
 
   console.log("timerCards", timerCards);
   console.log("info", info)
-  console.log(selectedDate, title)
+  //console.log(selectedDate, title)
 
   //const year = selectedDate.getUTCFullYear();
   //const month = selectedDate.getUTCMonth() + 1;
@@ -135,6 +135,10 @@ export const PublicCard = () => {
           year={card.toDateYear}
           month={card.toDateMonth}
           day={card.toDateDay}
+          hour={card.toDateHour}
+          minute={card.toDateMinute}
+          second={card.toDateSecond}
+          timerId={card.timerId}
         />
       )}
     </div>

@@ -115,16 +115,20 @@ function App() {
                 <Login />
               </div>)
               :
-              <Redirect exact to="/user/:userName" />
+              <Redirect exact to={`/user/${userName}`} />
             }
           </Route>
+
+          {/*<Redirect exact to="/user/:userName" />*/}
+
 
           {/*<Route exact path="/user/:userName">
             <div className="countdownSquare">
               <MyCountdown />
             </div>
           </Route>*/}
-          <Route exact path="/user/:userName">
+          {/*<Route exact path="/user/:userName">*/}
+          <Route exact path={`/user/${userName}`}>
             {user ?
               (<div className="countdownSquare">
                 <MyCountdown />

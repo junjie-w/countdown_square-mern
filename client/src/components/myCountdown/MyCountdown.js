@@ -143,6 +143,9 @@ export const MyCountdown = () => {
           year={card.toDateYear}
           month={card.toDateMonth}
           day={card.toDateDay}
+          hour={card.toDateHour}
+          minute={card.toDateMinute}
+          second={card.toDateSecond}
         />
       )}
     </div>

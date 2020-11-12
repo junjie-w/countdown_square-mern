@@ -52,6 +52,24 @@
   /*text-transform: inherit !important;*/
   background-color: rgb(137, 187, 159) !important;
   color: whitesmoke !important;
-  padding: 0.55rem 0.75rem !important;
+  /*font-weight: 400 !important;*/
+  padding: 0.63rem 0.87rem !important;
   border-radius: 9px !important;
+  box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.6) !important;
+}
+
+.login__button:hover {
+  /*text-transform: inherit !important;*/
+  /*background-color: rgba(112, 168, 168, 0.8) !important;*/
+  /*background-color: rgba(165, 122, 131, 0.6) !important;*/
+  /*background-color: rgba(103, 135, 161, 0.8) !important;*/
+  /*border: 1px solid rgba(112, 168, 168, 0.8) !important;*/
+  /*background-color: rgba(61, 150, 177, 0.58) !important;*/
+  background-color: rgba(52, 126, 155, 0.6) !important;
+  /*border: 1px solid rgba(112, 168, 168, 0.8) !important;*/
+  /*border: 1px 1px 1px 1px solid rgba(61, 141, 168, 0.281) !important;*/
+  /*color: whitesmoke !important;*/
+  /*font-weight: 400 !important;*/
+  padding: 0.66rem 0.89rem !important;
+  box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.85) !important;
 }

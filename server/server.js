@@ -47,15 +47,31 @@ app.get('/user/:displayName', (req, res) => {
 
 })
 
-app.delete('/countdown/:timerId', (req, res) => {
-  console.log("reqqq", req.body)
-  const timerId = req.params.timerId;
-  Card.findOneAndDelete({ timerId: timerId }, (err) => {
+//app.delete('/countdown/:timerId', (req, res) => {
+//  console.log("reqqq", req.body)
+//  console.log("paramsssss", req.params.timerId);
+//  const timerId = req.params.timerId;
+//  Card.findOneAndDelete({ timerId: timerId }, (err) => {
+//    if (err) {
+//      res.send(err)
+//    } else {
+//      res.send("deleted");
+//    }
+//  });
+//})
+
+app.delete('/timer/:id', (req, res) => {
+  console.log("reqqq", req.params.id)
+  const id = req.params.id
+  //console.log("paramsssss", req.params.timerId);
+  //const timerId = req.params.timerId;
+  Card.findByIdAndDelete(id, (err) => {
     if (err) {
       res.send(err)
     } else {
       res.send("deleted");
     }
+    //res.redirect('/');
   });
 })
 
