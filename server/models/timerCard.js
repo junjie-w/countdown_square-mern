@@ -15,7 +15,9 @@ const cardSchema = new Schema({
   timerId: String,
   //userName: String,
   //userEmail: String,
-  userToken: String
+  userToken: String,
+  userName: String,
+  userEmail: String
   //days: Number,
   //hours: Number,
   //minutes: Number,

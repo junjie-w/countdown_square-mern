@@ -44,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
 
 export const HomeRight = () => {
   const formRef = React.useRef();
+  const key = uuidv4();
+
 
   const [{ }, dispatch] = useStateValue();
 
@@ -56,8 +58,9 @@ export const HomeRight = () => {
       //  selectedDate: selectedDate,
       type: actionTypes.SET_INFO,
       countdownInfo: {
-        selectedDate: selectedDate,
-        title: title
+        //selectedDate: selectedDate,
+        title: title,
+        timerId: key
       }
     })
   }
@@ -143,7 +146,6 @@ export const HomeRight = () => {
 
   //console.log("title >>>", title);
 
-  const key = uuidv4();
 
   return (
     <div className="home_right">

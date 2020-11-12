@@ -7,6 +7,10 @@ export const TimerCard = ({ title, year, month, day, hour, minute, second, days,
     <div>
       <div className="textAndButton">
         <div className="text">
+          <div className="dots">
+            <div className="leftTop dot"></div>
+            <div className="rightTop dot"></div>
+          </div>
           <p className="cardTitle">{title} {" "} <span>Countdown</span> </p>
           {/*{console.log(timerComponents)}*/}
           {/*{timerComponents.length ? timerComponents : <span className="upText" >Time's up!</span>}*/}

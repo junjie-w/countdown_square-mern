@@ -14,6 +14,7 @@ mongoose.connect(connection_url, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
+  useFindAndModify: false
 })
 
 app.get('/', (req, res) => res.status(200).send("Hello"));
@@ -42,6 +43,10 @@ app.get('/countdown/public', (req, res) => {
   })
 })
 
+app.get('/user/:displayName', (req, res) => {
+
+})
+
 app.delete('/countdown/:timerId', (req, res) => {
   console.log("reqqq", req.body)
   const timerId = req.params.timerId;
@@ -58,10 +63,12 @@ app.patch('/user/:timerId', (req, res) => {
   console.log("timerId>>>", req.params.timerId)
   //console.log("reqbody>>>", req.body)
   const timerId = req.params.timerId;
+  const userName = req.body.userName;
   //console.log(timerId)
   const token = req.body.token;
-  console.log("token>>>", token)
-  Card.findOneAndUpdate({ timerId: timerId }, { userToken: token }, { new: true },
+  const userEmail = req.body.userEmail;
+  console.log("reqbodyyy", req.body)
+  Card.findOneAndUpdate({ timerId: timerId }, { userToken: token, userName: userName, userEmail: userEmail }, { new: true },
     (err, data) => {
       console.log("doc", data);
       if (err) {

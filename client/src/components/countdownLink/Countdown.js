@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import './Countdown.css';
 import '../Home/HomeLeft';
 import { HomeLeft } from '../Home/HomeLeft';
@@ -8,8 +8,35 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { TimerCard } from './TimerCard';
 import axios from '../../axios';
+import { useStateValue } from '../../context/StateProvider';
+import { actionTypes } from '../../context/Reducer';
 
 export const Countdown = () => {
+
+  const [info, dispatch] = useStateValue();
+
+  console.log("rabbit", info)
+
+  //const { user, userToken } = info;
+
+
+  //const [userExist, setUserExist] = useState(null);
+  //const [userToken, setUserToken] = useState(null)
+  const { user } = info.userInfo;
+  const { userName } = info.userInfo;
+  const { userToken } = info.userInfo;
+  const { userEmail } = info.userInfo;
+
+
+  console.log("turtle", user, userName, userToken)
+
+  //if (info.user) {
+  //  const user = info.user;
+  //  //setUserExist(user)
+  //  const userName = info.user.displayName;
+  //  const userToken = info.userInfo.userToken;
+  //  //setUserToken(userToken)
+  //}
 
   const data = useLocation();
   console.log("000", data)
@@ -21,6 +48,7 @@ export const Countdown = () => {
   const { id } = data.state;
   const { selectedDate } = data.state.selectedDate;
   const { title } = data.state.title;
+  console.log("999", title)
   //console.log("selectedDate", selectedDate)
   delete selectedDate.selectedDate;
   //console.log("new", selectedDate)
@@ -147,12 +175,39 @@ export const Countdown = () => {
       selectedDate: selectedDate,
       personalCountdown: true,
       timerId: id,
+      user: user,
+      userToken: userToken,
+      userEmail: userEmail
     }
 
     const postData = async () => await axios.post('/countdown/public', timerInfo)
       .then(response => console.log(response))
       .catch(error => console.log("error", error));
     postData();
+
+    //const dispatchUserInfo = () => {
+    dispatch(
+      {
+        type: actionTypes.SET_INFO,
+        countdownInfo: {
+          timerId: id,
+          title: title,
+        },
+      },
+      {
+        type: actionTypes.SET_USER,
+        userInfo: {
+          user: user,
+          userToken: userToken,
+          userName: userName,
+          userEmail: userEmail,
+        }
+      },
+
+    )
+    console.log("dispatched")
+    //}
+    //dispatchUserInfo();
 
     console.log("saved to my countdown!")
 
@@ -220,24 +275,33 @@ export const Countdown = () => {
           </ConditionalLink>
           {/*</Link>*/}
           {/*</Link>*/}
-          <Link to={{
+          {/*<Link to={{
             pathname: `/user/${id}`,
             state: {
               timerId: { id },
               title: { title },
               selectedDate: { selectedDate }
             }
-          }}          >
+          }}>*/}
+          <ConditionalLink to={{
+            //pathname: !user ? "/login" : `/user/${id}`,
+            pathname: `/user/${id}`,
+            state: {
+              timerId: { id },
+              title: { title },
+              selectedDate: { selectedDate }
+            }
+          }} condition={savedToPersonal}>
             {/*<ConditionalLink to={`/user/${id}`} condition={savedToPersonal}>*/}
             {/*<Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >*/}
-            <Button onClick={saveToDbPersonal} type="submit" variant="contained" className="countdownButton"  >
+            <Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >
               {/*{!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}*/}
               <div className="purpleButtonText">
-                Save to My Countdown
+                {!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}
               </div>
             </Button>
-            {/*</ConditionalLink>*/}
-          </Link>
+          </ConditionalLink>
+          {/*</Link>*/}
         </div>
         <div className="publicText">
           <p><em>*for public events, holidays, etc:)</em></p>

@@ -11,8 +11,12 @@ export const MyCountdown = () => {
   //console.log("yuyuyuyuyu", title, untilDate)
   const [timerCards, setTimerCards] = useState([])
   const [info, dispatch] = useStateValue();
-  const { selectedDate, title, user, userToken } = info;
-  console.log("infooooo", info)
+
+  const { userToken } = info.userInfo;
+  console.log("infooooo", userToken)
+  const { userEmail } = info.userInfo;
+
+
 
   const data = useLocation();
   console.log("jijij", data)
@@ -28,7 +32,7 @@ export const MyCountdown = () => {
 
   console.log("timerCards", timerCards);
   console.log("info", info)
-  console.log(selectedDate, title)
+  //console.log(selectedDate, title)
 
   //const year = selectedDate.getUTCFullYear();
   //const month = selectedDate.getUTCMonth() + 1;
@@ -43,7 +47,7 @@ export const MyCountdown = () => {
 
 
 
-  const personalTimerCards = timerCards.filter(card => card.userToken === userToken && card.personalCountdown === true)
+  const personalTimerCards = timerCards.filter(card => card.userEmail === userEmail && card.personalCountdown === true)
   console.log("guagua", personalTimerCards)
 
   let eachTimer = personalTimerCards.map(card => {

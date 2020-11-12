@@ -1,11 +1,14 @@
 export const initialState = {
   userInfo: {
     user: null,
-    userToken: null,
+    userToken: "",
+    userName: "",
+    userEmail: ""
   },
   countdownInfo: {
-    selectedDate: {},
-    title: ""
+    //selectedDate: null,
+    title: "",
+    timerId: ""
   },
 }
 
@@ -19,12 +22,19 @@ export const actionTypes = {
 
 const reducer = (state, action) => {
   console.log("action", action);
+  console.log("state", state)
+  //const { type, payload } = action;
+
   switch (action.type) {
     case actionTypes.SET_USER:
       return {
         ...state,
-        user: action.user,
-        userToken: action.userToken,
+        userInfo: {
+          user: action.userInfo.user,
+          userToken: action.userInfo.userToken,
+          userName: action.userInfo.userName,
+          userEmail: action.userInfo.userEmail
+        }
       };
     //case actionTypes.SET_TOKEN:
     //  return {
@@ -34,8 +44,12 @@ const reducer = (state, action) => {
     case actionTypes.SET_INFO:
       return {
         ...state,
-        selectedDate: action.countdownInfo.selectedDate,
-        title: action.countdownInfo.title
+        //selectedDate: action.countdownInfo.selectedDate,
+        //title: action.countdownInfo.title
+        countdownInfo: {
+          title: action.countdownInfo.title,
+          timerId: action.countdownInfo.timerId
+        }
       };
     default:
       return state;
