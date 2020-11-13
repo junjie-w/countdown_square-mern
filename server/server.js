@@ -71,9 +71,24 @@ app.delete('/timer/:id', (req, res) => {
     } else {
       res.send("deleted");
     }
-    //res.redirect('/');
+    //res.redirect('back');
   });
 })
+
+//app.delete('/timer/:timerId', (req, res) => {
+//  console.log("reqqq", req.params.timerId)
+//  const timerId = req.params.timerId
+//  //console.log("paramsssss", req.params.timerId);
+//  //const timerId = req.params.timerId;
+//  Card.findOneAndDelete({ timerId: timerId }, (err) => {
+//    if (err) {
+//      res.send(err)
+//    } else {
+//      res.send("deleted");
+//    }
+//    //res.redirect('back');
+//  });
+//})
 
 app.patch('/user/:timerId', (req, res) => {
   console.log("timerId>>>", req.params.timerId)

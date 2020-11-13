@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TimerCard.css';
 import Button from '@material-ui/core/Button';
 
@@ -13,6 +13,15 @@ export const TimerCard = ({ title, year, month, day, hour, minute, second, days,
     second
   }
   console.log("!???!!", selectedDate)
+
+  const [copyText, setCopyText] = useState(<> Copy < br /> The < br /> Link </>)
+
+
+  const url = window.location.href;
+  const copyLink = (url) => {
+    navigator.clipboard.writeText(url);
+    setCopyText(<> Link < br /> Copied! < br /> :) </>)
+  }
 
 
   return (
@@ -46,9 +55,10 @@ export const TimerCard = ({ title, year, month, day, hour, minute, second, days,
           <span className="dateText2"> {" "} {`${hour < 10 ? `0${hour}` : hour}`}:{`${minute < 10 ? `0${minute}` : minute}`}:{`${second < 10 ? `0${second}` : second}`}</span>
         </p>
       </div>
-      <Button type="submit" variant="contained" className="countdownButton linkButton"  >
+      <Button type="submit" variant="contained" className="countdownButton linkButton" onClick={() => copyLink(url)} >
         <div className="copyText">
-          Copy<br />The<br />Link
+          {copyText}
+          {/*Copy<br />The<br />Link*/}
         </div>
       </Button>
     </div>

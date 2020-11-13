@@ -11,6 +11,8 @@ export const MyCountdown = () => {
   //console.log("yuyuyuyuyu", title, untilDate)
   const [timerCards, setTimerCards] = useState([])
   const [info, dispatch] = useStateValue();
+  const { timerId, title, deleted } = info.countdownInfo;
+
 
   const { userToken } = info.userInfo;
   console.log("infooooo", userToken)
@@ -28,7 +30,7 @@ export const MyCountdown = () => {
     }
     fetchData();
     return () => fetchData();
-  }, [])
+  }, [deleted])
 
   console.log("timerCards", timerCards);
   console.log("info", info)
@@ -47,7 +49,7 @@ export const MyCountdown = () => {
 
 
 
-  const personalTimerCards = timerCards.filter(card => card.userEmail === userEmail && card.personalCountdown === true)
+  const personalTimerCards = timerCards.reverse().filter(card => card.userEmail === userEmail && card.personalCountdown === true)
   console.log("guagua", personalTimerCards)
 
   let eachTimer = personalTimerCards.map(card => {
@@ -131,7 +133,7 @@ export const MyCountdown = () => {
 
   return (
     <div className="cardContainer">
-      {personalTimerCards.map(card =>
+      {personalTimerCards.reverse().map((card, index) =>
         <EachPublicCard
           //className="eachPublicCard"
           id={card._id}
@@ -146,6 +148,7 @@ export const MyCountdown = () => {
           hour={card.toDateHour}
           minute={card.toDateMinute}
           second={card.toDateSecond}
+          index={index}
         />
       )}
     </div>

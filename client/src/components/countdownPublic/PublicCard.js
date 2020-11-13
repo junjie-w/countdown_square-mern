@@ -11,7 +11,17 @@ export const PublicCard = () => {
   //console.log("yuyuyuyuyu", title, untilDate)
   const [timerCards, setTimerCards] = useState([])
   const [info, dispatch] = useStateValue();
-  const { timerId, title } = info.countdownInfo;
+  const { timerId, title, deleted } = info.countdownInfo;
+  //const [deleted, setDeleted] = useState(false)
+
+  //const deleteTimer = async () => {
+  //  console.log(">>>>>>", timerId)
+  //  await axios.delete(`/timer/${timerId}`)
+  //    .then(response => console.log(response))
+  //    .catch(error => console.log("error", error));
+  //  //window.location.reload()
+  //  setDeleted(true)
+  //}
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +30,17 @@ export const PublicCard = () => {
     }
     fetchData();
     return () => fetchData();
-  }, [])
+  }, [deleted])
+
+  //const [justLoaded, setJustLoaded] = useState(false);
+
+  //useEffect(() => {
+  //  setJustLoaded(true)
+  //  const timer = setTimeout(setJustLoaded(false), 100)
+  //  return () => {
+  //    clearTimeout()
+  //  }
+  //}, [])
 
   console.log("timerCards", timerCards);
   console.log("info", info)
@@ -36,9 +56,10 @@ export const PublicCard = () => {
 
 
   //const { days, hours, minutes, seconds } = timeLeft
+  //console.log("timercards", timerCards)
 
-
-
+  //const reversedTimerCards = timerCards.reverse()
+  //console.log("reversed", reversedTimerCards)
   const publicTimerCards = timerCards.filter(card => card.publicCountdown === true)
   console.log("lalala", publicTimerCards)
 
@@ -98,6 +119,7 @@ export const PublicCard = () => {
   })
 
 
+
   console.log("timeleft", timeLeft)
 
 
@@ -123,7 +145,7 @@ export const PublicCard = () => {
 
   return (
     <div className="cardContainer">
-      {publicTimerCards.map(card =>
+      {publicTimerCards.reverse().map((card, index) =>
         <EachPublicCard
           //className="eachPublicCard"
           id={card._id}
@@ -139,6 +161,8 @@ export const PublicCard = () => {
           minute={card.toDateMinute}
           second={card.toDateSecond}
           timerId={card.timerId}
+          index={index}
+        //deleteTimer={() => deleteTimer(timerId)}
         />
       )}
     </div>

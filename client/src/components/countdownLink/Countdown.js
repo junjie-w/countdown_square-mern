@@ -255,8 +255,9 @@ export const Countdown = () => {
           <p>{title}</p>
         </div>*/}
 
-        <div className="buttons">
-          {/*<Link to={{
+        <div className="buttonAndPublicText">
+          <div className="buttons">
+            {/*<Link to={{
             pathname: '/countdownSquare',
             state: {
               title: { title },
@@ -265,19 +266,19 @@ export const Countdown = () => {
               //publicTimerCards: publicTimerCards
             }
           }}>*/}
-          <ConditionalLink to="/countdownSquare" condition={savedToPublic}>
-            {/*<Button onClick={() => addToPublic(title, untilDate, id)} type="submit" variant="contained" className="countdownButton"  >*/}
-            {/*<Link path="/countdownSquare">*/}
-            <Button onClick={!savedToPublic && saveToDbPublic} type="submit" variant="contained" className={`countdownButton ${savedToPublic && "savedButton"}`}>
-              {/*Add to public square*/}
-              <div className="purpleButtonText">
-                {!savedToPublic ? "Save to Countdown Square*" : "Check it in Countdown Square"}
-              </div>
-            </Button>
-          </ConditionalLink>
-          {/*</Link>*/}
-          {/*</Link>*/}
-          {/*<Link to={{
+            <ConditionalLink to="/countdownSquare" condition={savedToPublic}>
+              {/*<Button onClick={() => addToPublic(title, untilDate, id)} type="submit" variant="contained" className="countdownButton"  >*/}
+              {/*<Link path="/countdownSquare">*/}
+              <Button onClick={!savedToPublic && saveToDbPublic} type="submit" variant="contained" className={`countdownButton ${savedToPublic && "savedButton"}`}>
+                {/*Add to public square*/}
+                <div className="purpleButtonText">
+                  {!savedToPublic ? "Save to Countdown Square*" : "Check it in Countdown Square"}
+                </div>
+              </Button>
+            </ConditionalLink>
+            {/*</Link>*/}
+            {/*</Link>*/}
+            {/*<Link to={{
             pathname: `/user/${id}`,
             state: {
               timerId: { id },
@@ -285,29 +286,30 @@ export const Countdown = () => {
               selectedDate: { selectedDate }
             }
           }}>*/}
-          <ConditionalLink to={{
-            //pathname: !user ? "/login" : `/user/${id}`,
-            pathname: `/user/${id}`,
-            state: {
-              timerId: { id },
-              title: { title },
-              selectedDate: { selectedDate }
-            }
-          }} condition={savedToPersonal}>
-            {/*<ConditionalLink to={`/user/${id}`} condition={savedToPersonal}>*/}
-            {/*<Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >*/}
-            <Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >
-              {/*{!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}*/}
-              <div className="purpleButtonText">
-                {!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}
-              </div>
-            </Button>
-          </ConditionalLink>
-          {/*</Link>*/}
-        </div>
-        <div className="publicText">
-          <p><em>*for public events, holidays, etc:)</em></p>
-          {/*<p><em>*Countdown Square collects countdowns for public events, holidays, etc:)</em></p>*/}
+            <ConditionalLink to={{
+              //pathname: !user ? "/login" : `/user/${id}`,
+              pathname: `/user/${id}`,
+              state: {
+                timerId: { id },
+                title: { title },
+                selectedDate: { selectedDate }
+              }
+            }} condition={savedToPersonal}>
+              {/*<ConditionalLink to={`/user/${id}`} condition={savedToPersonal}>*/}
+              {/*<Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >*/}
+              <Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >
+                {/*{!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}*/}
+                <div className="purpleButtonText">
+                  {!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}
+                </div>
+              </Button>
+            </ConditionalLink>
+            {/*</Link>*/}
+          </div>
+          <div className="publicText">
+            <p><em>*for public events, holidays, etc:)</em></p>
+            {/*<p><em>*Countdown Square collects countdowns for public events, holidays, etc:)</em></p>*/}
+          </div>
         </div>
       </div>
       {/*<div className="button">*/}

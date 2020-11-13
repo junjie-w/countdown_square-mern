@@ -6,8 +6,11 @@
   /*grid-template-columns: repeat(6, 3rem);*/
   /*grid-template-columns: repeat(auto-fill, minmax(11.26rem, 1fr)) !important;
   grid-template-rows: repeat(auto-fill, minmax(13.5rem, 1fr)) !important;*/
-  grid-template-columns: repeat(auto-fill, minmax(11.26rem, 1fr)) !important;
-  grid-template-rows: repeat(auto-fill, minmax(13.39rem, 1fr)) !important;
+  /*grid-template-columns: repeat(auto-fill, minmax(11.26rem, 1fr)) !important;*/
+  /*grid-template-rows: repeat(auto-fill, minmax(13.39rem, 1fr)) !important;*/
+  grid-template-columns: repeat(auto-fill, minmax(11.45rem, 1fr)) !important;
+  /*grid-template-columns: repeat(auto-fill, minmax(12.45rem, 1fr)) !important;*/
+  grid-template-rows: repeat(auto-fill, minmax(15.45rem, 1fr)) !important;
   /*grid-auto-rows: 5rem !important;*/
 
   /*height: auto;*/
@@ -15,13 +18,16 @@
   width: auto;
   /*grid-template-columns: repeat(auto-fill, minmax(2fr, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(2fr, 1fr));*/
-  column-gap: 1rem !important;
-  row-gap: 1rem !important;
+  column-gap: 0.63rem !important;
+  /*column-gap: 0.8rem !important;*/
+  row-gap: 0.7rem !important;
   /*grid-gap: 10px;*/
   overflow-y: scroll;
-  margin-top: 1rem;
+  /*margin-top: 1.08vw;*/
+  margin-top: 1.3rem;
   /*padding-top: 0.05rem;*/
-  padding-left: 1.35rem !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1rem !important;
 }
 
 /*.card {

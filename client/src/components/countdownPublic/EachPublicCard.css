@@ -29,6 +29,15 @@
   /*width: fit-content;*/
 }
 
+.firstCard__justLoaded {
+  box-shadow: -5px 7px 20px -9px #dbedf3;
+  opacity: 0.8;
+  /*padding: 1px !important;*/
+  padding: 30px !important;
+  background-color: rgb(255, 242, 220, 0.5);
+  /*background-color: rgba(220, 239, 255, 0.5);*/
+}
+
 .eachCard__dots {
   display: flex;
   justify-content: space-between;
@@ -113,16 +122,25 @@
 .eachCard__deleteButton {
   justify-self: end;
   display: none;
+  /*visibility: hidden;*/
 }
 
 .deleteButton.MuiIconButton-root {
-  color: wheat;
-  height: 0.5rem;
-  width: 0.5rem;
+  /*color: rgba(132, 185, 155, 0.7);
+  color: rgba(116, 155, 133, 0.5);*/
+  /*color: rgba(238, 170, 196, 0.5);*/
+  /*color: rgba(231, 229, 68, 0.5);*/
+  /*color: rgba(241, 218, 175, 0.7);
+  color: rgba(116, 155, 133, 0.375);*/
+  color: rgba(116, 155, 133, 0.5);
+  /*background-color: wheat;*/
+  height: 0.6rem;
+  width: 0.6rem;
 }
 
 .eachCard:hover .eachCard__deleteButton {
-  display: block;
+  display: inline-block;
+  /*visibility: visible;*/
 }
 
 .eachCard__untilDate {

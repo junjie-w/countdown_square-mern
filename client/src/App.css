@@ -1,7 +1,11 @@
 .app {
   display: grid;
-  height: 88vh;
-  width: 90vw;
+  /*height: 88vh;
+  width: 90vw;*/
+  /*height: 89vh;
+  width: 91vw;*/
+  min-height: 88vh;
+  min-width: 90vw;
   align-items: center;
   background-color: wheat;
   place-self: center;

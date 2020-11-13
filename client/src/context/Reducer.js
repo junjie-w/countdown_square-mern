@@ -8,7 +8,8 @@ export const initialState = {
   countdownInfo: {
     //selectedDate: null,
     title: "",
-    timerId: ""
+    timerId: "",
+    deleted: false
   },
 }
 
@@ -48,7 +49,8 @@ const reducer = (state, action) => {
         //title: action.countdownInfo.title
         countdownInfo: {
           title: action.countdownInfo.title,
-          timerId: action.countdownInfo.timerId
+          timerId: action.countdownInfo.timerId,
+          deleted: action.countdownInfo.deleted
         }
       };
     default:
