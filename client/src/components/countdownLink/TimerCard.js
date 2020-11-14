@@ -14,7 +14,7 @@ export const TimerCard = ({ title, year, month, day, hour, minute, second, days,
   }
   console.log("!???!!", selectedDate)
 
-  const [copyText, setCopyText] = useState(<> Copy < br /> The < br /> Link </>)
+  const [copyText, setCopyText] = useState(<> Copy < br /> Timer < br /> Link </>)
 
 
   const url = window.location.href;
