@@ -19,7 +19,8 @@ export const TimerCard = ({ title, year, month, day, hour, minute, second, days,
 
   const url = window.location.href;
   const copyLink = (url) => {
-    navigator.clipboard.writeText(url);
+    navigator.clipboard.writeText(`${url}/-${title}/square`);
+    //navigator.clipboard.writeText(`${url}`);
     setCopyText(<> Link < br /> Copied! < br /> :) </>)
   }
 

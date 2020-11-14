@@ -19,6 +19,36 @@ export const Countdown = () => {
 
   //const { user, userToken } = info;
 
+  //const millisecondsString = window.location.pathname;
+  //const milliseconds = millisecondsString.substr("11")
+  //console.log(234, milliseconds)
+  //const userSelectedDate = new Date(milliseconds)
+
+
+  //console.log(223, userSelectedDate)
+  //const linkString = window.location.pathname;
+  //console.log("linkString", linkString)
+
+  //const dateString = linkString.substr(11)
+  //console.log("dateString", dateString)
+
+  //const dateStringSplit = dateString.split('%20')
+  //console.log("dateStringSplit", dateStringSplit)
+
+  //const [toDateYear, toDateMonth, toDateDay, toDateHour, toDateMinute, toDateSecond, toDateTimezone] = dateStringSplit;
+  //console.log("yeeep", toDateYear, toDateMonth, toDateDay, toDateHour, toDateMinute, toDateSecond, toDateTimezone)
+
+
+  //const untilDateMonth = `${toDateMonth < 10 ? `0${toDateMonth}` : toDateMonth}`
+  //const untilDateDay = `${toDateDay < 10 ? `0${toDateDay}` : toDateDay}`;
+  //const untilDateHour = `${toDateHour < 10 ? `0${toDateHour}` : toDateHour}`
+  //const untilDateMinute = `${toDateMinute < 10 ? `0${toDateMinute}` : toDateMinute}`
+  //const untilDateSecond = `${toDateSecond < 10 ? `0${toDateSecond}` : toDateSecond}`
+
+  //const userSelectedDate = new Date("2014-06-12T23:00:00 GMT+0200")
+  //const userSelectedDate = `${toDateYear}-${untilDateMonth}-${untilDateDay}T${untilDateHour}:${untilDateMinute}:${untilDateSecond} ${toDateTimezone}`
+
+
 
   //const [userExist, setUserExist] = useState(null);
   //const [userToken, setUserToken] = useState(null)
@@ -55,12 +85,27 @@ export const Countdown = () => {
   //console.log(title)
   //console.log(key)
   console.log("okoko", selectedDate)
-  const year = selectedDate.getUTCFullYear();
-  const month = selectedDate.getUTCMonth() + 1;
-  const day = selectedDate.getUTCDate();
-  const hour = selectedDate.getUTCHours();
-  const minute = selectedDate.getUTCMinutes();
-  const second = selectedDate.getUTCSeconds();
+  //const year = selectedDate.getUTCFullYear();
+  //const month = selectedDate.getUTCMonth() + 1;
+  //const day = selectedDate.getUTCDate();
+  //const hour = selectedDate.getUTCHours();
+  //const minute = selectedDate.getUTCMinutes();
+  //const second = selectedDate.getUTCSeconds();
+  //const untilDate = {
+  //  year,
+  //  month,
+  //  day,
+  //  hour,
+  //  minute,
+  //  second
+  //}
+
+  const year = selectedDate.getFullYear();
+  const month = selectedDate.getMonth() + 1;
+  const day = selectedDate.getDate();
+  const hour = selectedDate.getHours();
+  const minute = selectedDate.getMinutes();
+  const second = selectedDate.getSeconds();
   const untilDate = {
     year,
     month,
@@ -74,6 +119,7 @@ export const Countdown = () => {
 
   const calculateTimeLeft = () => {
     let difference = +selectedDate - +new Date()
+    //let difference = +userSelectedDate - +new Date()
     let timeLeft = {};
     if (difference > 0) {
       timeLeft = {

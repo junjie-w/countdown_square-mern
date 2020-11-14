@@ -75,7 +75,36 @@ export const HomeRight = () => {
     setSelectedDate(date);
   };
 
-  //console.log("llllll", selectedDate)
+  console.log("llllll", selectedDate)
+
+  const year = selectedDate.getFullYear();
+  const month = selectedDate.getMonth() + 1;
+  const day = selectedDate.getDate();
+  const hour = selectedDate.getHours();
+  const minute = selectedDate.getMinutes();
+  const second = selectedDate.getSeconds();
+  const toDate = {
+    year,
+    month,
+    day,
+    hour,
+    minute,
+    second
+  }
+
+  const selectedDateString = selectedDate.toString();
+  const timezoneString = selectedDateString.substr(24, 24).substr(1, 3)
+  console.log("timezone!!!", timezoneString)
+
+  //console.log("butterfly", selectedDateString)
+
+  //const selectedDateToString = `${year} ${month} ${day} ${hour} ${minute} ${second} ${timezoneString}`
+
+  //console.log("tostring", selectedDateToString)
+
+
+  const dateMilliseconds = new Date(selectedDate).getTime();
+  console.log("milliseconds", dateMilliseconds)
 
   //const calculateTimeLeft = () => {
   //  let difference = +selectedDate - +new Date()
@@ -197,7 +226,8 @@ export const HomeRight = () => {
         </div>
         {/*<Countdown title={title} selectedDate={selectedDate} />*/}
         <Link to={{
-          pathname: `/countdown/${key}`,
+          //pathname: `/countdown/${selectedDateToString}`,
+          pathname: `/countdown/${timezoneString}/${dateMilliseconds}`,
           state: {
             key: key,
             id: key,

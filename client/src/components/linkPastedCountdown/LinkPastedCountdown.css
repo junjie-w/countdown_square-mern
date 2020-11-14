@@ -1,0 +1,40 @@
+.linkPastedCountdown {
+  display: flex;
+  justify-content: center;
+}
+
+.linkPastedCountdown__textAndButton {
+  margin: 0.95rem 0 0 0 !important;
+}
+.linkPastedCountdown__text {
+  margin: 0.45rem 0 0 0 !important;
+  padding: 1.7rem 2.3rem 2rem 2.3rem !important;
+}
+
+.linkPastedCountdown__dots {
+  /*padding-bottom: 1rem !important;*/
+  width: 99.5%;
+}
+
+.linkPastedCountdown__timerText > p {
+  padding: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.linkPastedCountdown__cardTitle {
+  padding: 0.1rem 0.5rem 0.5rem 0.5rem !important;
+  /*width: 75%;*/
+  text-align: center;
+  font-family: fantasy !important;
+  /*height: 3.7rem;*/
+  font-size: 1.6rem;
+}
+
+.titleStringText {
+  margin-bottom: 1rem;
+}
+
+.linkPastedCountdown__countdownText {
+  padding: 0.5rem !important;
+  font-size: 1.3rem !important;
+}

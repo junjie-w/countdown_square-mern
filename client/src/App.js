@@ -11,6 +11,7 @@ import { Login } from './components/login/Login';
 import { PublicCard } from './components/countdownPublic/PublicCard';
 import { useStateValue } from './context/StateProvider';
 import { MyCountdown } from './components/myCountdown/MyCountdown';
+import { LinkPastedCountdown } from './components/linkPastedCountdown/LinkPastedCountdown';
 
 function App() {
   const [state, dispatch] = useStateValue();
@@ -33,7 +34,8 @@ function App() {
           </Route>
 
           {/*After an user creates a countdown*/}
-          <Route exact path="/countdown/:countdownId">
+          {/*<Route exact path="/countdown/:countdownId/:selectedDate">*/}
+          <Route exact path="/countdown/:timezone/:selectedDate">
             <Countdown />
           </Route>
 
@@ -136,6 +138,10 @@ function App() {
               :
               <Redirect exact to="/login" />
             }
+          </Route>
+
+          <Route exact path="/countdown/:timezone/:selectedDate/:title/square">
+            <LinkPastedCountdown />
           </Route>
         </Switch>
         <Footer />

@@ -63,6 +63,7 @@
   flex: 0.45;
   margin-right: 3rem;
   margin-bottom: 3rem;
+  margin-left: 2.63rem;
 }
 
 .countdown__timerBackground {
@@ -146,6 +147,7 @@
   .countdown__timerImg {
     margin-bottom: 3rem;
     margin-right: 0;
+    margin-left: 0;
     margin-top: 2.5rem;
     width: 90%;
     display: flex;
@@ -205,14 +207,13 @@
 @media (max-width: 1335px) {
   .countdown__timerBackground {
     /*height: 43vh !important;*/
-    margin-left: 1.7rem;
+    margin-left: 1.5rem;
   }
 }
 
 @media (max-width: 1198px) {
   .countdown__timerBackground {
     /*height: 36vh !important;*/
-    margin-left: 3rem;
     height: 36vh;
   }
   .timer {

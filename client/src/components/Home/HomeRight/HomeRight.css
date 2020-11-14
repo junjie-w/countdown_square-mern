@@ -170,14 +170,15 @@
 
 .homeRight__button {
   /*align-self: flex-start;*/
-  padding: 12px 28.5px !important;
-  border-radius: 27px !important;
+  /*padding: 12px 28.5px !important;*/
+  padding: 1.075rem 0.85rem !important;
+  border-radius: 35px !important;
   background-color: rgb(137, 187, 159) !important;
   border: none;
   /*text-transform: inherit !important;*/
   color: whitesmoke !important;
   font-size: 1rem !important;
-  width: 8.35rem !important;
+  width: 7.75rem !important;
 }
 
 @media (min-width: 2000px) {
@@ -207,6 +208,7 @@
   .form a {
     /*width: 12rem;*/
     display: flex;
+    justify-content: center;
   }
 
   .homeRight__button {
@@ -241,6 +243,19 @@
 
   .timePicker > .MuiFormControl-root {
     width: 30vw;
+  }
+
+  .homeRight__button {
+    padding: 1rem 0.85rem !important;
+    border-radius: 35px !important;
+    background-color: rgb(137, 187, 159) !important;
+    border: none;
+    /*text-transform: inherit !important;*/
+    color: whitesmoke !important;
+    font-size: 0.85rem !important;
+    width: 6.5rem !important;
+    margin-top: 1.3rem !important;
+    margin-bottom: 2.5rem !important;
   }
 }
 
