@@ -316,9 +316,11 @@ export const Countdown = () => {
       {/*<div className="buttonVertical">
 
       </div>*/}
-      <div className="timerImg">
-        <HomeLeft />
+      <div className="countdown__timerImg">
+        {/*<div className="countdown__backgroundImg" >*/}
+        <img className="countdown__timerBackground" src="/images/hourglass.jpg" alt="" />
+        {/*</div>*/}
       </div>
-    </div >
+    </div>
   )
 }

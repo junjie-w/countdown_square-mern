@@ -1,8 +1,8 @@
-.backgroundImg {
+.homeLeft__backgroundImg {
   flex: 0.4;
 }
 
-.hourglassImg {
+.homeLeft__hourglassImg {
   margin-left: 6vw;
   margin-top: 3rem;
   height: 50vh;
@@ -10,11 +10,29 @@
   border-radius: 120px;
 }
 
-@media (max-width: 800px) {
-  .backgroundImg {
+@media (max-width: 870px) {
+  .homeLeft__backgroundImg {
     align-self: center;
   }
-  .hourglassImg {
-    margin-left: 1vw;
+  .homeLeft__hourglassImg {
+    margin: 2rem 2rem 1.5rem 2rem !important;
+  }
+}
+
+@media (max-width: 1198px) {
+  .homeLeft__hourglassImg {
+    height: 40vh !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .homeLeft__hourglassImg {
+    height: 35.8vh !important;
+  }
+}
+
+@media (max-width: 523px) {
+  .homeLeft__hourglassImg {
+    height: 27vh !important;
   }
 }

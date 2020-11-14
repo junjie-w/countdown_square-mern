@@ -55,7 +55,7 @@
 }
 
 .input .MuiFormLabel-root {
-  font-size: 1rem;
+  font-size: 1.085rem;
 }
 
 .input > .MuiFilledInput-underline:before {
@@ -165,10 +165,10 @@
 }
 
 .form a {
-  width: 7vw;
+  width: 8.35rem;
 }
 
-.button {
+.homeRight__button {
   /*align-self: flex-start;*/
   padding: 12px 28.5px !important;
   border-radius: 27px !important;
@@ -177,10 +177,98 @@
   /*text-transform: inherit !important;*/
   color: whitesmoke !important;
   font-size: 1rem !important;
+  width: 8.35rem !important;
 }
 
 @media (min-width: 2000px) {
   .home_right {
     flex: 0.4;
+  }
+}
+
+@media (max-width: 870px) {
+  .home_right {
+    flex: 1 !important;
+    width: 100%;
+    display: flex;
+    place-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form .MuiFormControl-root {
+    margin-right: 0 !important;
+  }
+
+  .form > .form makeStyles-root-1 {
+    margin-right: 0 !important;
+  }
+
+  .form a {
+    /*width: 12rem;*/
+    display: flex;
+  }
+
+  .homeRight__button {
+    justify-self: center;
+  }
+
+  .form > .MuiFormControl-root {
+    width: 60%;
+  }
+
+  .dateTimePicker {
+    width: 55% !important;
+  }
+
+  .MuiGrid-root > .dateTimePicker {
+    width: 100% !important;
+  }
+
+  .datePicker {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .datePicker > .MuiFormControl-root {
+    width: 30vw;
+  }
+
+  .timePicker {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .timePicker > .MuiFormControl-root {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 523px) {
+  .datePicker > .MuiFormControl-root {
+    width: 50vw;
+  }
+
+  .timePicker > .MuiFormControl-root {
+    width: 50vw;
+  }
+
+  .input .MuiFormLabel-root {
+    font-size: 0.95rem;
+  }
+
+  .input > .MuiFilledInput-root {
+    padding-top: 0.15rem !important;
+    padding-bottom: 0.15rem !important;
+  }
+}
+
+@media (max-width: 310px) {
+  .datePicker > .MuiFormControl-root {
+    width: 85vw;
+  }
+
+  .timePicker > .MuiFormControl-root {
+    width: 85vw;
   }
 }

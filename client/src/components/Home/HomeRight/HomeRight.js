@@ -206,7 +206,7 @@ export const HomeRight = () => {
           }
         }}>
           {/*<Button onClick={setSendData(true)} type="submit" className="button" variant="contained" >*/}
-          <Button onClick={() => makeData(selectedDate, title)} type="submit" className="button" variant="contained" >
+          <Button onClick={() => makeData(selectedDate, title)} type="submit" className="homeRight__button" variant="contained" >
             Create
         </Button>
         </Link>

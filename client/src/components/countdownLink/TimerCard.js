@@ -55,12 +55,14 @@ export const TimerCard = ({ title, year, month, day, hour, minute, second, days,
           <span className="dateText2"> {" "} {`${hour < 10 ? `0${hour}` : hour}`}:{`${minute < 10 ? `0${minute}` : minute}`}:{`${second < 10 ? `0${second}` : second}`}</span>
         </p>
       </div>
-      <Button type="submit" variant="contained" className="countdownButton linkButton" onClick={() => copyLink(url)} >
-        <div className="copyText">
-          {copyText}
-          {/*Copy<br />The<br />Link*/}
-        </div>
-      </Button>
+      <div className="timerCard__copyButton">
+        <Button type="submit" variant="contained" className="countdownButton linkButton" onClick={() => copyLink(url)} >
+          <div className="copyText">
+            {copyText}
+            {/*Copy<br />The<br />Link*/}
+          </div>
+        </Button>
+      </div>
     </div>
   )
 }

@@ -35,13 +35,13 @@
   place-items: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 870px) {
   .home {
     flex-direction: column;
   }
-  .app {
+  /*.app {
     height: 90%;
-  }
+  }*/
 }
 
 @media (min-width: 2000px) {

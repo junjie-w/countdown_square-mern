@@ -2,10 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import Card from "./models/timerCard.js";
 import Cors from "cors";
+//require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8000;
-const connection_url = 'mongodb+srv://admin:echobrooke@cluster0.q6bah.mongodb.net/countdowndb?retryWrites=true&w=majority'
+const connection_url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.q6bah.mongodb.net/countdowndb?retryWrites=true&w=majority`
 
 app.use(express.json());
 app.use(Cors());
@@ -15,6 +18,9 @@ mongoose.connect(connection_url, {
   useCreateIndex: true,
   useUnifiedTopology: true,
   useFindAndModify: false
+}, (err) => {
+  if (err) throw err;
+  console.log("DB Connected Successfully");
 })
 
 app.get('/', (req, res) => res.status(200).send("Hello"));
@@ -43,9 +49,9 @@ app.get('/countdown/public', (req, res) => {
   })
 })
 
-app.get('/user/:displayName', (req, res) => {
+//app.get('/user/:displayName', (req, res) => {
 
-})
+//})
 
 //app.delete('/countdown/:timerId', (req, res) => {
 //  console.log("reqqq", req.body)

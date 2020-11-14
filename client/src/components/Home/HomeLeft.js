@@ -3,8 +3,8 @@ import './HomeLeft.css'
 
 export const HomeLeft = () => {
   return (
-    <div className="backgroundImg" >
-      <img className="hourglassImg" src="/images/hourglass.jpg" alt="" />
+    <div className="homeLeft__backgroundImg" >
+      <img className="homeLeft__hourglassImg" src="/images/hourglass.jpg" alt="" />
     </div>
   )
 }

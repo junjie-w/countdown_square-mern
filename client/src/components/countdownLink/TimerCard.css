@@ -6,6 +6,24 @@
   width: 100%;*/
 }
 
+.timerCard__copyButton {
+  display: flex;
+  align-items: center;
+}
+
+.linkButton {
+  /*justify-self: start;
+  align-self: start;*/
+  height: fit-content;
+  align-self: center;
+  justify-self: center !important;
+}
+
+.copyText {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .text {
   font-size: 1.3rem;
   border-left: 1px solid rgb(252, 245, 245);
@@ -97,18 +115,6 @@
   /*color: wheat;*/
 }
 
-.linkButton {
-  /*justify-self: start;
-  align-self: start;*/
-  height: fit-content;
-  align-self: center;
-}
-
-.copyText {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 /*
 .leftTop {
   top: 0;
@@ -119,3 +125,44 @@
   right: 0;
   top: 0;
 }*/
+
+@media (max-width: 903px) {
+}
+
+@media (min-width: 1335px) {
+  .timer {
+    margin-left: 7.5rem;
+    margin-right: 0.5rem;
+    flex: 0.5;
+  }
+  .countdown__timerImg {
+    flex: 0.4;
+    margin-left: 6rem !important;
+  }
+
+  /*.homeLeft__hourglassImg {
+    margin-left: 2.5rem;
+  }*/
+  .text {
+    font-size: 1.6rem;
+  }
+  .uptext {
+    font-size: 1.8rem;
+  }
+  .timerText {
+    font-size: 1.75rem;
+  }
+  .pText {
+    font-size: 1.6rem;
+  }
+  .dateText {
+    font-size: 1.5rem;
+  }
+  .linkButton.MuiButton-root {
+    padding: 1rem 1.23rem !important;
+    margin-left: 2rem !important;
+  }
+  .text {
+    padding: 1.63rem;
+  }
+}
