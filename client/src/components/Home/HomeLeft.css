@@ -19,15 +19,16 @@
   }
 }
 
-@media (max-width: 1198px) {
+/*@media (max-width: 1198px) {*/
+@media (max-width: 1130px) {
   .homeLeft__hourglassImg {
-    height: 40vh !important;
+    height: 45vh !important;
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .homeLeft__hourglassImg {
-    height: 35.8vh !important;
+    height: 40vh !important;
   }
 }
 
