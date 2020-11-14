@@ -6,9 +6,15 @@
 .linkPastedCountdown__textAndButton {
   margin: 0.95rem 0 0 0 !important;
 }
+
 .linkPastedCountdown__text {
-  margin: 0.45rem 0 0 0 !important;
-  padding: 1.7rem 2.3rem 2rem 2.3rem !important;
+  margin: 0.5rem 0 0 0 !important;
+  padding: 1.7rem 2.58rem 2rem 2.58rem !important;
+}
+
+.linkPastedCountdown__text:hover {
+  padding: 1.715rem 3.367rem 2.15rem 3.367rem !important;
+  box-shadow: -4px 8px 14.5px -8.85px rgba(0, 0, 0, 0.85);
 }
 
 .linkPastedCountdown__dots {
