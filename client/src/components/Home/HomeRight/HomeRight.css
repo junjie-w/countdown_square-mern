@@ -279,13 +279,13 @@
 }
 
 @media (max-width: 400px) {
-  .datePicker > .MuiFormControl-root {
-    width: 85vw;
+  /*.datePicker > .MuiFormControl-root {
+    width: 80vw !important;
   }
 
   .timePicker > .MuiFormControl-root {
-    width: 85vw;
-  }
+    width: 80vw !important;
+  }*/
 }
 
 /*@media (max-width: 415px) {
@@ -293,3 +293,15 @@
     font-size: 1rem;
   }
 }*/
+@media (max-width: 415px) {
+  .dateTimePicker {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .datePicker > .MuiFormControl-root {
+    width: 60vw !important;
+  }
+  .timePicker > .MuiFormControl-root {
+    width: 60vw !important;
+  }
+}

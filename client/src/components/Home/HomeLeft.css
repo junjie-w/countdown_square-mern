@@ -35,7 +35,8 @@
 
 @media (max-width: 523px) {
   .homeLeft__hourglassImg {
-    height: 27vh !important;
+    height: 28vh !important;
+    margin-bottom: 2.21rem !important;
   }
 }
 

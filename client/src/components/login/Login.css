@@ -75,6 +75,14 @@
 }
 
 @media (max-width: 415px) {
+  .loginPage {
+    margin-bottom: 9rem;
+  }
+
+  .login__text {
+    margin-bottom: 4rem;
+  }
+
   .backgroundImg {
     padding: 3rem;
   }

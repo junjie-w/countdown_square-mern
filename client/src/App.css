@@ -56,9 +56,9 @@
     min-height: 100vh !important;
   }
   .countdownSquare {
-    min-height: 100vh !important;
+    min-height: 108vh !important;
   }
-  /*.home {
-    height: 100%;
-  }*/
+  .home {
+    margin-bottom: 2rem;
+  }
 }

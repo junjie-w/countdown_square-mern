@@ -1,6 +1,8 @@
 .linkPastedCountdown {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .linkPastedCountdown__textAndButton {
@@ -45,14 +47,14 @@
   font-size: 1.3rem !important;
 }
 
-/*@media (max-width: 415px) {*/
-/*.linkPastedCountdown__textAndButton {
+@media (max-width: 415px) {
+  /*.linkPastedCountdown__textAndButton {
     height: 90vh;
     width: 90vw;
     place-self: center;
   }*/
 
-/*.linkPastedCountdown__cardTitle {
+  /*.linkPastedCountdown__cardTitle {
     padding: 0.1rem 0.5rem 0.5rem 0.5rem !important;
     font-size: 3.35rem;
   }
@@ -71,4 +73,9 @@
     padding-right: 0.725rem !important;
     padding-left: 0.725rem !important;
   }*/
-/*}*/
+  .linkPastedCountdown {
+    /*margin: 5rem 0 10rem 0;*/
+    height: 85vh;
+    margin-bottom: 4.5rem;
+  }
+}

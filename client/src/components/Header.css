@@ -15,6 +15,7 @@
 
 .header__title {
   padding: 1.7rem;
+  /*padding: 2.7rem 1.7rem 1.7rem 1.7rem;*/
   margin-left: 70px;
   color: whitesmoke;
   font-size: 1.05rem;
@@ -53,12 +54,14 @@ a {
   }
 }
 
-/*@media (max-width: 400px) {
+@media (max-width: 415px) {
   .header {
-    height: 23vh;
+    padding-top: 0.15rem;
   }
+}
 
+@media (max-width: 901.5px) {
   .header__titleHome {
-    font-size: 2rem;
+    padding-top: 3rem;
   }
-}*/
+}
