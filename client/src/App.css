@@ -50,3 +50,15 @@
     justify-content: space-evenly;
   }
 }
+
+@media (max-width: 415px) {
+  .app {
+    min-height: 100vh !important;
+  }
+  .countdownSquare {
+    min-height: 100vh !important;
+  }
+  /*.home {
+    height: 100%;
+  }*/
+}

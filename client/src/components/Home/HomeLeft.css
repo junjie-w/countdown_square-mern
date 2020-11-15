@@ -6,7 +6,8 @@
   margin-left: 6vw;
   margin-top: 3rem;
   height: 50vh;
-  opacity: 20%;
+  /*opacity: 20%;*/
+  opacity: 0.2;
   border-radius: 120px;
 }
 
@@ -35,5 +36,11 @@
 @media (max-width: 523px) {
   .homeLeft__hourglassImg {
     height: 27vh !important;
+  }
+}
+
+@media (max-width: 415px) {
+  .homeLeft__hourglassImg {
+    margin-top: 4rem !important;
   }
 }

@@ -11,7 +11,7 @@
 }
 
 .loginImg {
-  opacity: 20%;
+  opacity: 0.2;
   border-radius: 120px;
   margin: 1.5rem 2rem 2.5rem 2rem !important;
   height: 30.5vh !important;
@@ -72,4 +72,10 @@
   /*font-weight: 400 !important;*/
   padding: 0.66rem 0.89rem !important;
   box-shadow: -1px 4px 12px -6px rgba(0, 0, 0, 0.85) !important;
+}
+
+@media (max-width: 415px) {
+  .backgroundImg {
+    padding: 3rem;
+  }
 }

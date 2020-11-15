@@ -27,13 +27,6 @@
   /*color: rgb(250, 239, 239);*/
 }
 
-/*.backgroundImg {
-  object-fit: contain;
-  opacity: 0.8;
-  border-radius: 20px;
-  position: absolute;
-}*/
-
 .text {
   /*z-index: 100;*/
   margin-top: 1rem;
@@ -70,7 +63,7 @@
   margin-left: 6vw;
   margin-top: 3rem;
   height: 50vh;
-  opacity: 20%;
+  opacity: 0.2;
   border-radius: 120px;
 }
 

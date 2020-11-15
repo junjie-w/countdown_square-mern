@@ -29,7 +29,8 @@ export const PublicCard = () => {
       setTimerCards(req.data);
     }
     fetchData();
-    return () => fetchData();
+    //return () => fetchData();
+    //return () => { fetchData = null };
   }, [deleted])
 
   //const [justLoaded, setJustLoaded] = useState(false);

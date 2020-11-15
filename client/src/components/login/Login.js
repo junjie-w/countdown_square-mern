@@ -109,7 +109,7 @@ export const Login = () => {
     //<div className="login">
     <div className="login__container">
       <div className="backgroundImg" >
-        <img className="loginImg" src="/images/hourglass.jpg" alt="" />
+        <img className="loginImg" src="images/hourglass.jpg" alt="" />
       </div>
       <div className="login__text">
         <p>Sign in to My Countdown</p>

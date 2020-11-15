@@ -278,7 +278,7 @@
   }
 }
 
-@media (max-width: 310px) {
+@media (max-width: 400px) {
   .datePicker > .MuiFormControl-root {
     width: 85vw;
   }
@@ -287,3 +287,9 @@
     width: 85vw;
   }
 }
+
+/*@media (max-width: 415px) {
+  .input .MuiFormLabel-root {
+    font-size: 1rem;
+  }
+}*/

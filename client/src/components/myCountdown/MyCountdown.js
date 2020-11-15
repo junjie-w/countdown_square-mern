@@ -29,7 +29,7 @@ export const MyCountdown = () => {
       setTimerCards(req.data);
     }
     fetchData();
-    return () => fetchData();
+    //return () => fetchData();
   }, [deleted])
 
   console.log("timerCards", timerCards);
@@ -43,13 +43,14 @@ export const MyCountdown = () => {
   //const minute = selectedDate.getUTCMinutes();
   //const second = selectedDate.getUTCSeconds();
 
-
-
   //const { days, hours, minutes, seconds } = timeLeft
 
+  //const reversedPersonalTimerCards = timerCards.reverse();
 
+  //const personalTimerCards = timerCards.reverse().filter(card => card.userEmail === userEmail && card.personalCountdown === true)
+  //const personalTimerCards = reversedPersonalTimerCards.filter(card => card.userEmail === userEmail && card.personalCountdown === true)
+  const personalTimerCards = timerCards.filter(card => card.userEmail === userEmail && card.personalCountdown === true)
 
-  const personalTimerCards = timerCards.reverse().filter(card => card.userEmail === userEmail && card.personalCountdown === true)
   console.log("guagua", personalTimerCards)
 
   let eachTimer = personalTimerCards.map(card => {
