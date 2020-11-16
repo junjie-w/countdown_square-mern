@@ -80,7 +80,7 @@
   }
 
   .login__text {
-    margin-bottom: 4.75rem;
+    margin-bottom: 4.43rem;
   }
 
   .backgroundImg {
@@ -93,7 +93,7 @@
   }
 
   .login__button > .MuiButton-label {
-    font-size: 1.085rem;
+    font-size: 1.045rem;
     padding: 0.157rem;
   }
 }
