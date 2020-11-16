@@ -296,7 +296,10 @@
 @media (max-width: 415px) {
   .dateTimePicker {
     padding-top: 1.5rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+  }
+  .datePicker {
+    padding-bottom: 0.817rem !important;
   }
   .datePicker > .MuiFormControl-root {
     width: 60vw !important;
@@ -315,6 +318,7 @@
   }
   .homeRight__button {
     padding: 1.17rem 3.85rem !important;
+    margin-bottom: 2.85rem !important;
   }
   .homeRight__button > .MuiButton-label {
     font-size: 0.98rem;
