@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { TimerCard } from '../countdownLink/TimerCard';
+import { HomeLeft } from '../Home/HomeLeft';
 import './LinkPastedCountdown.css'
 
 export const LinkPastedCountdown = () => {
@@ -91,6 +92,7 @@ export const LinkPastedCountdown = () => {
 
   return (
     <div className="linkPastedCountdown">
+      {/*<HomeLeft />*/}
       <div className="textAndButton linkPastedCountdown__textAndButton">
         <div className="text linkPastedCountdown__text">
           <div className="dots linkPastedCountdown__dots">

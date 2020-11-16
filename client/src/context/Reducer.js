@@ -3,7 +3,8 @@ export const initialState = {
     user: null,
     userToken: "",
     userName: "",
-    userEmail: ""
+    userEmail: "",
+    userNumber: "",
   },
   countdownInfo: {
     //selectedDate: null,
@@ -34,7 +35,8 @@ const reducer = (state, action) => {
           user: action.userInfo.user,
           userToken: action.userInfo.userToken,
           userName: action.userInfo.userName,
-          userEmail: action.userInfo.userEmail
+          userEmail: action.userInfo.userEmail,
+          userNumber: action.userInfo.userNumber
         }
       };
     //case actionTypes.SET_TOKEN:

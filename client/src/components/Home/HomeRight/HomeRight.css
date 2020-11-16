@@ -304,4 +304,19 @@
   .timePicker > .MuiFormControl-root {
     width: 60vw !important;
   }
+  .input .MuiFormLabel-root {
+    font-size: 1.285rem;
+  }
+  .datePicker .MuiFormLabel-root {
+    font-size: 1.39rem;
+  }
+  .timePicker .MuiFormLabel-root {
+    font-size: 1.35rem;
+  }
+  .homeRight__button {
+    padding: 1.17rem 3.85rem !important;
+  }
+  .homeRight__button > .MuiButton-label {
+    font-size: 0.98rem;
+  }
 }

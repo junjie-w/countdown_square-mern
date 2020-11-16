@@ -6,6 +6,7 @@ import { auth, provider } from '../../firebase';
 import { actionTypes } from '../../context/Reducer';
 import { useLocation } from "react-router-dom";
 import axios from '../../axios';
+import { v4 as uuidv4 } from 'uuid';
 
 
 export const Login = () => {
@@ -73,6 +74,8 @@ export const Login = () => {
 
         console.log("userrrrr", result.user)
 
+        const userNumber = uuidv4();
+
         //const dispatchInfo = () => {
         dispatch(
           {
@@ -82,6 +85,7 @@ export const Login = () => {
               userToken: token,
               userName: displayName,
               userEmail: userEmail,
+              userNumber: userNumber
             }
           },
           //{
@@ -109,10 +113,10 @@ export const Login = () => {
     //<div className="login">
     <div className="login__container">
       <div className="backgroundImg" >
-        <img className="loginImg" src="images/hourglass.jpg" alt="" />
+        <img className="loginImg" src="/images/hourglass.jpg" alt="" />
       </div>
       <div className="login__text">
-        <p>Sign in to My Countdown</p>
+        <p>Sign in to My Countdowns</p>
       </div>
       <Button className="login__button" type="submit" onClick={signIn}>Sign in with Google</Button>
     </div>

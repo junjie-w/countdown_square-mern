@@ -166,3 +166,29 @@
     padding: 1.63rem;
   }
 }
+
+@media (max-width: 415px) {
+  .timerText > p {
+    padding: 0.2rem;
+    font-size: 1.7rem;
+  }
+  .text {
+    padding: 1.2rem;
+  }
+  .countdown__timerBackground {
+    height: 34vh !important;
+  }
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+  .buttonAndPublicText {
+    margin-top: 0.85rem;
+  }
+  .buttons .MuiButton-root {
+    padding: 0.78rem 1rem !important;
+  }
+  .countdown__timerBackground {
+    margin-top: 3.75rem;
+    margin-bottom: 3rem !important;
+  }
+}

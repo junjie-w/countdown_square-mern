@@ -8,7 +8,7 @@ export const Header = () => {
   const [info, dispatch] = useStateValue();
 
   const { user } = info.userInfo;
-  const { userName } = info.userInfo;
+  const { userNumber } = info.userInfo;
 
   //useEffect(() => {
   //  if (info.user) {
@@ -57,8 +57,8 @@ export const Header = () => {
           userToken: { userToken },
         }
       }} condition={user}>*/}
-      <Link to={user ? `/user/${userName}` : "/login"} >
-        <p className="header__title header__titleUser">My Countdown</p>
+      <Link to={user ? `/user/${userNumber}` : "/login"} >
+        <p className="header__title header__titleUser">My Countdowns</p>
       </Link>
       {/*</ConditionalLink>*/}
     </nav >

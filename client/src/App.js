@@ -16,7 +16,7 @@ import { LinkPastedCountdown } from './components/linkPastedCountdown/LinkPasted
 function App() {
   const [state, dispatch] = useStateValue();
   const { user } = state.userInfo
-  const { userName } = state.userInfo
+  const { userNumber } = state.userInfo
   console.log("nulloruser", user, state)
 
   return (
@@ -117,7 +117,7 @@ function App() {
                 <Login />
               </div>)
               :
-              <Redirect exact to={`/user/${userName}`} />
+              <Redirect exact to={`/user/${userNumber}`} />
             }
           </Route>
 
@@ -130,7 +130,7 @@ function App() {
             </div>
           </Route>*/}
           {/*<Route exact path="/user/:userName">*/}
-          <Route exact path={`/user/${userName}`}>
+          <Route exact path={`/user/${userNumber}`}>
             {user ?
               (<div className="countdownSquare">
                 <MyCountdown />

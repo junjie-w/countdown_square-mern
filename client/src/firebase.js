@@ -8,8 +8,8 @@ const firebaseConfig = {
   projectId: "countdown-square-junjie",
   storageBucket: "countdown-square-junjie.appspot.com",
   messagingSenderId: "861955980198",
-  appId: "1:861955980198:web:99dce8710f5c3ba91dad67",
-  measurementId: "G-2DJRJZ2GZD"
+  appId: "1:861955980198:web:09530e8e851accb71dad67",
+  measurementId: "G-2QJ9SKWCL0"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

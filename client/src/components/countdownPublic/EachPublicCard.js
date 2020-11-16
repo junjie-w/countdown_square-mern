@@ -48,7 +48,7 @@ export const EachPublicCard = ({ id, timerId, title, days, hours, minutes, secon
   const [justLoaded, setJustLoaded] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setJustLoaded(false), 43.5)
+    const timer = setTimeout(() => setJustLoaded(false), 50)
     //clearTimeout(timer)
 
     console.log("setTimeOut")

@@ -35,13 +35,16 @@
 
 @media (max-width: 523px) {
   .homeLeft__hourglassImg {
-    height: 28vh !important;
-    margin-bottom: 2.21rem !important;
+    height: 32.5vh !important;
+    margin-bottom: 2.75rem !important;
   }
 }
 
 @media (max-width: 415px) {
   .homeLeft__hourglassImg {
-    margin-top: 4rem !important;
+    margin-top: 5rem !important;
+  }
+  .dateTimePicker {
+    margin-bottom: 1.5rem;
   }
 }

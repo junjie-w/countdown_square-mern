@@ -140,7 +140,7 @@ export const MyCountdown = () => {
           id={card._id}
           title={card.title}
           days={card.timeLeft.days}
-          hours={card.timeLeft.days}
+          hours={card.timeLeft.hours}
           minutes={card.timeLeft.minutes}
           seconds={card.timeLeft.seconds}
           year={card.toDateYear}

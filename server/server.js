@@ -40,7 +40,10 @@ app.post('/countdown/public', (req, res) => {
 app.get('/countdown/public', (req, res) => {
   //console.log("hello");
 
-  Card.find((err, data) => {
+  Card.find({}, {
+    userToken: 0,
+    userName: 0,
+  }, (err, data) => {
     if (err) {
       res.status(500).send(err)
     } else {

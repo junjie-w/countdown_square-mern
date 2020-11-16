@@ -346,7 +346,7 @@ export const Countdown = () => {
               <Button onClick={!savedToPersonal && saveToDbPersonal} type="submit" variant="contained" className={`countdownButton ${savedToPersonal && "savedButton"}`}  >
                 {/*{!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}*/}
                 <div className="purpleButtonText">
-                  {!savedToPersonal ? "Save to My Countdown" : "Check it in My Countdown"}
+                  {!savedToPersonal ? "Save to My Countdowns" : "Check it in My Countdown"}
                 </div>
               </Button>
             </ConditionalLink>
