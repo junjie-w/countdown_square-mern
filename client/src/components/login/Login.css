@@ -76,15 +76,15 @@
 
 @media (max-width: 415px) {
   .loginPage {
-    margin-bottom: 16rem;
+    margin-bottom: 18rem;
   }
 
   .login__text {
-    margin-bottom: 4rem;
+    margin-bottom: 4.75rem;
   }
 
   .backgroundImg {
-    padding-top: 4.75rem;
+    padding-top: 4.85rem;
     padding-bottom: 3.5rem;
   }
 
@@ -93,6 +93,7 @@
   }
 
   .login__button > .MuiButton-label {
-    font-size: 1rem;
+    font-size: 1.085rem;
+    padding: 0.157rem;
   }
 }
