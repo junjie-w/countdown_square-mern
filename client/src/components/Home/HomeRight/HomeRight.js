@@ -217,6 +217,7 @@ export const HomeRight = () => {
                         'aria-label': 'change time',
                       }}
                       keyboardIcon={<AlarmIcon />}
+                      views={["hours", "minutes", "seconds"]}
                     />
                   </div>
                 </div>
