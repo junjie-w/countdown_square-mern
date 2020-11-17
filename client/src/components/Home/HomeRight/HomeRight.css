@@ -164,6 +164,14 @@
   color: #709fb0;
 }
 
+.MuiTypography-h2 {
+  font-size: 2.315rem !important;
+}
+
+.MuiTypography-h3 {
+  font-size: 2.315rem !important;
+}
+
 .form a {
   width: 8.35rem;
 }
