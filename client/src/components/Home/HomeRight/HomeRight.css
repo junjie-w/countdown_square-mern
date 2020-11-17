@@ -166,10 +166,12 @@
 
 .MuiTypography-h2 {
   font-size: 2.315rem !important;
+  font-weight: 400 !important;
 }
 
 .MuiTypography-h3 {
   font-size: 2.315rem !important;
+  font-weight: 400 !important;
 }
 
 .form a {
