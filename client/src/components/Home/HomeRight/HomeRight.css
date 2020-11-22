@@ -295,6 +295,10 @@
     padding-top: 0.15rem !important;
     padding-bottom: 0.15rem !important;
   }
+
+  .input .MuiInputBase-input {
+    font-size: 1.23rem !important;
+  }
 }
 
 @media (max-width: 400px) {
