@@ -80,6 +80,15 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+.input .MuiInputBase-input {
+  color: rgb(41, 88, 61) !important;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 1.118rem !important;
+  /*font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.05rem !important;*/
+}
+
 .dateTimePicker {
   /*margin: 0 !important;*/
   align-self: center;
