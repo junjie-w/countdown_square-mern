@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "countdown-square-junjie"
+    "default": "countdown-square-junjie",
+    "development": "junjie-wu"
   }
 }
