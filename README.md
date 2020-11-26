@@ -1,5 +1,6 @@
 # countdown_square-mern
-Countdown Square is a fully functional, fully responsive countdown app designed and developed by me:)
+Countdown Square is a fully functional, fully responsive countdown app designed and developed by me:) \
+It's built with react, express.js, node.js and mongodb, deployed with firebase (frontend) and heroku (backend). <br>
 I'd love to hear feedback from you!
 
 <hr>
