@@ -2,5 +2,14 @@
   "projects": {
     "default": "countdown-square-junjie",
     "development": "junjie-wu"
+  },
+  "targets": {
+    "junjie-wu": {
+      "hosting": {
+        "CountdownSquare": [
+          "junjiewu--countdown-square"
+        ]
+      }
+    }
   }
 }
