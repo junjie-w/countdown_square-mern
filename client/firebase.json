@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target": "CountdownSquare",
+    "target": "countdown-square",
     "public": "build",
     "ignore": [
       "firebase.json",

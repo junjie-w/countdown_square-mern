@@ -6,7 +6,7 @@
   "targets": {
     "junjie-wu": {
       "hosting": {
-        "CountdownSquare": [
+        "countdown-square": [
           "junjiewu--countdown-square"
         ]
       }
