@@ -1,4 +1,7 @@
 {
+  "projects": {
+    "default": "junjie-wu"
+  },
   "targets": {
     "junjie-wu": {
       "hosting": {
@@ -7,8 +10,5 @@
         ]
       }
     }
-  },
-  "projects": {
-    "default": "junjie-wu"
   }
 }
