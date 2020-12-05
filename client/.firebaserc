@@ -1,8 +1,4 @@
 {
-  "projects": {
-    "default": "countdown-square-junjie",
-    "development": "junjie-wu"
-  },
   "targets": {
     "junjie-wu": {
       "hosting": {
@@ -11,5 +7,8 @@
         ]
       }
     }
+  },
+  "projects": {
+    "default": "junjie-wu"
   }
 }
