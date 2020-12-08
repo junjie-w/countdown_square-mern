@@ -1,6 +1,5 @@
 # Countdown Square 
-<br>
-React.js, Node.js, Express.js, MongoDB
+##### (React.js, Node.js, Express.js, MongoDB)
 =======
 <!--This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).-->
 
