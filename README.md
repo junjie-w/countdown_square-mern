@@ -5,8 +5,8 @@
 #### Countdown Square is a fully functional, fully responsive countdown app designed and developed by me:)
 #### It's built with React.js, Node.js, Express.js, and MongoDB. The frontend was deployed on Firebase and the backend was deployed on Heroku.
 
-<!--<br>-->
-##### I'd love to hear feedback from you! :)
+<br>
+I'd love to hear feedback from you! :)
 <br>
 <hr>
 <br>
