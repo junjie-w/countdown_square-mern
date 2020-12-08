@@ -1,3 +1,20 @@
+# countdown_square-mern
+=======
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Countdown Square is a fully functional, fully responsive countdown app designed and developed by me:)
+## It's built with react, express.js, node.js and mongodb. The frontend was deployed on Firebase and the backend was deployed on Heroku.
+
+<br>
+## I'd love to hear feedback from you! :)
+<br>
+<p align="center">
+<img src="/public/images/mockup_burned_countdownSquare.png" width="780px" height="auto">
+</p>
+<br>
+<hr>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
