@@ -1,6 +1,6 @@
 # Countdown Square
 
-※ Create a cute countdown timer to any date ※
+<br>※ Create a cute countdown timer to any date ※<br>
 =======
 <!--This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).-->
 
