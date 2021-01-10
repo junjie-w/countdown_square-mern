@@ -59,7 +59,8 @@
   padding: 0.1rem 1rem 0.3rem 1rem !important;
   /*width: 75%;*/
   text-align: center;
-  font-family: fantasy !important;
+  /*font-family: fantasy !important;*/
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .cardTitle span {

@@ -62,7 +62,8 @@
   border-bottom: 1px solid rgba(99, 170, 148, 0.7);
   /*font-family: fantasy !important;*/
   /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
-  font-family: fantasy;
+  /*font-family: fantasy;*/
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 0.1rem 1rem 0.2rem 1rem !important;
   font-size: 1.1rem;
 }
