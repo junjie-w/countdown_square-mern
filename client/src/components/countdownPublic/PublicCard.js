@@ -54,8 +54,8 @@ export const PublicCard = () => {
   //  }
   //}, [])
 
-  console.log("timerCards", timerCards);
-  console.log("info", info)
+  //console.log("timerCards", timerCards);
+  //console.log("info", info)
   //console.log(selectedDate, title)
 
   //const year = selectedDate.getUTCFullYear();

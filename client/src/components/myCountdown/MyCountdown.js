@@ -17,13 +17,13 @@ export const MyCountdown = () => {
 
 
   const { userToken } = info.userInfo;
-  console.log("infooooo", userToken)
+  //console.log("infooooo", userToken)
   const { userEmail } = info.userInfo;
 
 
 
   const data = useLocation();
-  console.log("jijij", data)
+  //console.log("data", data)
 
   useEffect(() => {
     const fetchData = async () => {
