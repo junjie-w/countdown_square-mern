@@ -7,7 +7,7 @@ import { PublicCard } from './PublicCard';
 export const CountdownPublic = () => {
   const dataReceived = useLocation();
 
-  console.log("2222", dataReceived)
+  console.log("dataReceived", dataReceived)
   //const { key } = dataReceived.state.key;
   const { title } = dataReceived.state.title;
   const { untilDate } = dataReceived.state.untilDate;
@@ -44,7 +44,7 @@ export const CountdownPublic = () => {
     //  addToPublic()
     //}
   }, [])
-  console.log("ppp", publicTimerCards)
+  console.log("publicTimerCards", publicTimerCards)
 
 
   return (

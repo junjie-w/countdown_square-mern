@@ -6,6 +6,7 @@ import { useStateValue } from '../../context/StateProvider';
 import { TimerCard } from '../countdownLink/TimerCard';
 import { EachPublicCard } from '../countdownPublic/EachPublicCard';
 import { useLocation } from "react-router-dom";
+import Loader from 'react-loader-spinner';
 
 export const MyCountdown = () => {
   //console.log("yuyuyuyuyu", title, untilDate)
@@ -91,8 +92,8 @@ export const MyCountdown = () => {
 
   })
 
-  console.log("ppppppppppp", eachTimer)
-  console.log("new222", timerCards)
+  console.log("eachTimer", eachTimer)
+  console.log("timerCards", timerCards)
 
   const [timeLeft, setTimeLeft] = useState(eachTimer)
 
@@ -111,7 +112,9 @@ export const MyCountdown = () => {
 
   console.log("timeleft", timeLeft)
 
+  const randomLoader = Math.floor(Math.random() * 3) + 1;
 
+  const type = ["ThreeDots", "Grid", "Oval"]
 
   //const timerComponents = timeLeft.map(i => Object.keys(i).forEach(interval => {
   //  let timerComponent = []
@@ -133,25 +136,44 @@ export const MyCountdown = () => {
   //const { title, toDateYear, toDateMonth, toDateDay, toDateHour, toDateMinute, toDateSecond } = timerCards
 
   return (
-    <div className="cardContainer">
-      {personalTimerCards.reverse().map((card, index) =>
-        <EachPublicCard
-          //className="eachPublicCard"
-          id={card._id}
-          title={card.title}
-          days={card.timeLeft.days}
-          hours={card.timeLeft.hours}
-          minutes={card.timeLeft.minutes}
-          seconds={card.timeLeft.seconds}
-          year={card.toDateYear}
-          month={card.toDateMonth}
-          day={card.toDateDay}
-          hour={card.toDateHour}
-          minute={card.toDateMinute}
-          second={card.toDateSecond}
-          index={index}
-        />
-      )}
-    </div>
+    <>
+      {timerCards.loading
+        ?
+        <div className="publicCard__loading">
+          <Loader
+            //type="ThreeDots"
+            //type="Grid"
+            //type="Oval"
+            type={type[randomLoader - 1]}
+            color="#84b99b"
+            height={63}
+            width={63}
+          //timeout={3000} //3 secs
+          />
+          <p className="publicCard__loadingText">Loading...</p>
+        </div>
+        :
+        <div className="cardContainer">
+          {personalTimerCards.reverse().map((card, index) =>
+            <EachPublicCard
+              //className="eachPublicCard"
+              id={card._id}
+              title={card.title}
+              days={card.timeLeft.days}
+              hours={card.timeLeft.hours}
+              minutes={card.timeLeft.minutes}
+              seconds={card.timeLeft.seconds}
+              year={card.toDateYear}
+              month={card.toDateMonth}
+              day={card.toDateDay}
+              hour={card.toDateHour}
+              minute={card.toDateMinute}
+              second={card.toDateSecond}
+              index={index}
+            />
+          )}
+        </div>
+      }
+    </>
   )
 }

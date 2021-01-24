@@ -71,3 +71,17 @@
 .cardContainer::-webkit-scrollbar-thumb:hover {
   background: rgba(207, 154, 154, 0.5);
 }
+
+.publicCard__loading {
+  /*justify-self: center;
+  align-self: center;*/
+  /*position: absolute;
+  left: 50%;
+  right: 50%;*/
+  place-self: center;
+}
+
+.publicCard__loadingText {
+  color: rgba(147, 182, 162, 2.85);
+  margin-top: 0.75rem;
+}
