@@ -113,7 +113,9 @@ export const MyCountdown = () => {
 
   console.log("timeleft", timeLeft)
 
-  const randomLoader = Math.floor(Math.random() * 3) + 1;
+  const randomLoader = Math.floor(Math.random() * 3);
+
+  console.log("randomLoader on my countdown page", randomLoader);
 
   const type = ["ThreeDots", "Grid", "Oval"]
 
@@ -145,7 +147,7 @@ export const MyCountdown = () => {
             //type="ThreeDots"
             //type="Grid"
             //type="Oval"
-            type={type[randomLoader - 1]}
+            type={type[randomLoader]}
             color="#84b99b"
             height={63}
             width={63}

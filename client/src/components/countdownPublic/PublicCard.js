@@ -35,7 +35,7 @@ export const PublicCard = () => {
       //setTimerCards(req.data);
       setTimerCards({
         loading: false,
-        data: req.data
+        data: req.data,
       });
 
     }
@@ -120,7 +120,9 @@ export const PublicCard = () => {
 
   console.log("...oo", eachTimer)
 
-  const randomLoader = Math.floor(Math.random() * 3) + 1;
+  const randomLoader = Math.floor(Math.random() * 3);
+
+  console.log("randomLoader", randomLoader);
 
   const type = ["ThreeDots", "Grid", "Oval"]
 
@@ -176,7 +178,7 @@ export const PublicCard = () => {
             //type="ThreeDots"
             //type="Grid"
             //type="Oval"
-            type={type[randomLoader - 1]}
+            type={type[randomLoader]}
             color="#84b99b"
             height={63}
             width={63}
