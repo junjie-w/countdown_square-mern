@@ -6,6 +6,7 @@ import { useStateValue } from '../../context/StateProvider';
 import { TimerCard } from '../countdownLink/TimerCard';
 import { EachPublicCard } from '../countdownPublic/EachPublicCard';
 import { useLocation } from "react-router-dom";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from 'react-loader-spinner';
 
 export const MyCountdown = () => {
